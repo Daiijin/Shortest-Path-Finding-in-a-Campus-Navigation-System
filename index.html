@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#235ce1">
+  <meta name="description" content="Tìm đường trong khuôn viên HaUI với A* và Dijkstra, kết nối backend Python.">
+  <title>CampusNav · HaUI Campus Navigation</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/maplibre/maplibre-gl.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v5a4 4 0 0 0 4 4h5M9 6h5a4 4 0 0 1 4 4v5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-gps" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 20V4m-4 4 4-4 4 4m4-4v16m-4-4 4 4 4-4"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 2 8M4 4v6h6"/></symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9Zm-9 10 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </defs></svg>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CampusNav trang chủ"><span class="brand-mark"><svg><use href="#i-route"/></svg></span><span>Campus<span class="brand-accent">Nav</span><small>HAUI · CƠ SỞ 3</small></span></a>
+    <nav aria-label="Điều hướng chính"><a class="nav-active" href="#workspace">Tìm đường</a><button class="nav-link" id="aboutButton" type="button">Thông tin hệ thống</button></nav>
+    <span class="connection" id="connection"><span class="status-dot"></span><span id="connectionText">Đang kết nối…</span></span>
+  </header>
+  <main class="page">
+    <section class="intro" aria-labelledby="pageTitle">
+      <div><p class="eyebrow">CAMPUS NAVIGATION SYSTEM</p><h1 id="pageTitle">Khám phá campus, tìm đường dễ dàng.</h1><p class="intro-description">Chọn nơi xuất phát và điểm đến. Để A* và Dijkstra tìm lộ trình cho bạn.</p></div>
+      <div class="dataset-summary" aria-label="Dữ liệu khuôn viên"><div><strong id="locationCount">—</strong><span>địa điểm</span></div><div><strong id="nodeCount">—</strong><span>node</span></div><div><strong id="edgeCount">—</strong><span>đoạn đường</span></div></div>
+    </section>
+    <section class="workspace" id="workspace" aria-label="Tìm đường trong khuôn viên">
+      <aside class="control-card card">
+        <div class="card-title"><span class="section-number">01</span><h2>Thiết lập lộ trình</h2></div>
+        <div class="campus-badge"><svg><use href="#i-pin"/></svg><div><strong>HaUI · Cơ sở 3</strong><span>Khuôn viên đang được chọn</span></div><span class="online-dot"></span></div>
+        <div class="gps-controls"><button id="locateButton" type="button" class="button button-location" disabled><svg><use href="#i-gps"/></svg><span id="locateButtonText">Lấy vị trí hiện tại</span></button><p id="gpsStatus" class="gps-status" role="status" aria-live="polite">Bấm để xin quyền định vị từ thiết bị.</p><button id="useGpsStartButton" type="button" class="gps-start-button" hidden>Chọn địa điểm gần tôi làm điểm đầu</button></div>
+        <form id="routeForm" novalidate>
+          <div class="location-fields">
+            <div class="picker" id="startPicker"><label for="startInput"><span class="endpoint endpoint-start">A</span>Điểm bắt đầu</label><div class="picker-input"><input id="startInput" role="combobox" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="startOptions" placeholder="Chọn nơi xuất phát" disabled><svg><use href="#i-chevron"/></svg></div><div class="picker-options" id="startOptions" role="listbox" aria-label="Điểm bắt đầu" hidden></div></div>
+            <button id="swapButton" type="button" class="swap-button" title="Đổi điểm bắt đầu và điểm đến" aria-label="Đổi điểm bắt đầu và điểm đến"><svg><use href="#i-swap"/></svg></button>
+            <div class="picker" id="goalPicker"><label for="goalInput"><span class="endpoint endpoint-goal">B</span>Điểm đến</label><div class="picker-input"><input id="goalInput" role="combobox" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="goalOptions" placeholder="Bạn muốn đến đâu?" disabled><svg><use href="#i-chevron"/></svg></div><div class="picker-options" id="goalOptions" role="listbox" aria-label="Điểm đến" hidden></div></div>
+          </div>
+          <fieldset class="algorithm-field"><legend>Thuật toán tìm đường</legend><label class="algorithm-option"><input type="radio" name="algorithm" value="astar" checked><span class="algorithm-copy"><strong>A* Search</strong><span>Tìm kiếm có định hướng</span></span><span class="radio-indicator"></span></label><label class="algorithm-option"><input type="radio" name="algorithm" value="dijkstra"><span class="algorithm-copy"><strong>Dijkstra</strong><span>Duyệt theo chi phí đường đi</span></span><span class="radio-indicator"></span></label></fieldset>
+          <button id="findButton" type="submit" class="button button-primary" disabled><span id="findButtonText">Tìm đường</span><svg><use href="#i-arrow"/></svg></button>
+          <button id="resetButton" type="button" class="button button-secondary"><svg><use href="#i-reset"/></svg>Đặt lại lựa chọn</button>
+          <p class="form-status" id="status" role="status" aria-live="polite">Đang tải dữ liệu từ backend…</p>
+        </form>
+        <div class="map-selection"><span>Click trên bản đồ để chọn</span><div class="segmented"><button id="selectStartButton" class="is-active" type="button" aria-pressed="true">Điểm đầu</button><button id="selectGoalButton" type="button" aria-pressed="false">Điểm đến</button></div></div>
+        <button class="demo-button" id="demoButton" type="button"><svg><use href="#i-route"/></svg><span>Thử một lộ trình mẫu<small>Cổng chính → KTX Giảng viên 4</small></span><svg><use href="#i-arrow"/></svg></button>
+      </aside>
+      <section class="map-card card" aria-labelledby="mapTitle">
+        <div class="map-heading"><div><h2 id="mapTitle">Bản đồ khuôn viên</h2><p>Chọn địa điểm trực tiếp trên bản đồ</p></div><div class="map-heading-actions"><span class="provider-badge" id="providerBadge">Đang tải bản đồ</span><button id="expandMapButton" class="expand-map-button" type="button" aria-pressed="false" aria-label="Mở rộng bản đồ" title="Mở rộng bản đồ"><svg><use href="#i-focus"/></svg></button></div></div>
+        <div class="map-stage"><div id="map" role="region" aria-label="Bản đồ HaUI cơ sở 3"></div><div class="map-view-switch" aria-label="Kiểu bản đồ"><button id="roadmapButton" type="button" class="is-active">Bản đồ</button><button id="threeDButton" type="button" title="Nghiêng bản đồ và xem khối tòa nhà 3D theo dữ liệu bản đồ" hidden>3D</button><button id="satelliteButton" type="button" disabled title="Cần Google Maps API key để xem vệ tinh">Vệ tinh</button></div><button class="fit-button" id="fitButton" type="button" title="Xem toàn bộ khuôn viên" aria-label="Xem toàn bộ khuôn viên"><svg><use href="#i-focus"/></svg></button><p class="map-notice" id="mapNotice" hidden></p></div>
+        <div class="map-footer"><div class="legend"><span><i class="legend-start"></i>Điểm đầu</span><span><i class="legend-goal"></i>Điểm đến</span><span><i class="legend-route"></i>Lộ trình</span><span><i class="legend-gps"></i>GPS</span></div><label class="layer-toggle"><input type="checkbox" id="showGraph"><svg><use href="#i-layers"/></svg>Mạng đường</label><label class="layer-toggle"><input type="checkbox" id="showBuildings" checked>Tòa nhà</label><label class="layer-toggle"><input type="checkbox" id="showLabels"><span>Nhãn</span></label><a class="building-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Đường bao tòa nhà © OpenStreetMap contributors</a></div>
+      </section>
+      <aside class="result-card card" aria-labelledby="resultTitle">
+        <div class="card-title"><span class="section-number">02</span><h2 id="resultTitle">Kết quả tìm đường</h2></div>
+        <div id="resultEmpty" class="result-empty"><span class="empty-route-icon"><svg><use href="#i-route"/></svg></span><h3>Lộ trình của bạn<br>bắt đầu từ đây.</h3><p>Chọn hai địa điểm và bấm<br><strong>Tìm đường</strong> để xem kết quả.</p><div class="empty-steps"><span>A</span><i></i><span>B</span></div></div>
+        <div id="resultContent" class="result-content" hidden><div class="result-state"><span id="resultState">Đã tìm thấy lộ trình</span><span class="algorithm-badge" id="resultAlgorithm">A*</span></div><div class="distance-metric"><span>Tổng khoảng cách</span><strong id="distance">—</strong><small>Trọng số đường đi trong dataset</small></div><div class="metrics-grid"><div><svg><use href="#i-layers"/></svg><strong id="visited">—</strong><span>Node đã duyệt</span></div><div><svg><use href="#i-clock"/></svg><strong id="time">—</strong><span>Thời gian xử lý</span></div></div><div class="route-list-heading"><h3>Các điểm đi qua</h3><span id="pathCount">—</span></div><label class="waypoint-toggle"><input id="showWaypoints" type="checkbox">Hiện điểm trung gian</label><ol id="routeList" class="route-list"></ol></div>
+        <p class="result-note"><svg><use href="#i-info"/></svg><span>Kết quả được tính trực tiếp bằng thuật toán Python của nhóm.</span></p>
+      </aside>
+    </section>
+    <footer class="page-footer"><span><span class="status-dot"></span>Graph dùng chung cho A* và Dijkstra</span><span>HaUI Campus Navigation · Foundation Project</span></footer>
+  </main>
+  <dialog id="aboutDialog"><div class="dialog-heading"><h2>Thông tin hệ thống</h2><button id="closeAboutButton" type="button" aria-label="Đóng">×</button></div><p>CampusNav tìm đường trên graph của khuôn viên HaUI bằng A* hoặc Dijkstra.</p><dl><dt>Dữ liệu</dt><dd id="aboutData">Đang tải…</dd><dt>Kết nối</dt><dd>Website → Python API → route_service.find_route()</dd><dt>Bản đồ</dt><dd id="aboutMap">Leaflet + OpenStreetMap; không cần API key.</dd><dt>Đơn vị</dt><dd>Khoảng cách: mét. Thời gian: thời gian thuật toán, hiển thị theo mili giây.</dd></dl><p class="dialog-note">Marker và tuyến đường lấy từ cùng graph với thuật toán. Các cạnh cần được nhóm kiểm chứng với đường đi thực địa.</p></dialog>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
