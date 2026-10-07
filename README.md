@@ -2,7 +2,7 @@
 
 Website tìm đường trong khuôn viên HaUI cơ sở 3, kết nối trực tiếp thuật toán
 **A\*** và **Dijkstra** viết bằng Python. Giao diện tiếng Việt, bản đồ
-**MapLibre + OpenFreeMap** miễn phí, không cần API key hoặc thẻ thanh toán.
+**MapLibre + OpenFreeMap** 
 
 ![CampusNav với bản đồ 3D](docs/images/campus-navigation.png)
 
