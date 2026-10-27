@@ -1,0 +1,872 @@
+[
+  {
+    "id": "N001",
+    "name": "Cổng Chính Haui",
+    "lat": 20.54005746249062,
+    "lon": 105.8968930687437,
+    "type": "location",
+    "displayName": "Cổng Chính Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N002",
+    "name": "Vườn hoa",
+    "lat": 20.54040535164342,
+    "lon": 105.89637448611,
+    "type": "location",
+    "displayName": "Vườn hoa",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N003",
+    "name": "Đài phun nước trung tâm",
+    "lat": 20.54165721055564,
+    "lon": 105.8942493560029,
+    "type": "location",
+    "displayName": "Đài phun nước trung tâm",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N004",
+    "name": "Tòa C7",
+    "lat": 20.54022768115029,
+    "lon": 105.8939847141637,
+    "type": "location",
+    "displayName": "Tòa C7",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N005",
+    "name": "Tòa C8",
+    "lat": 20.54068517518155,
+    "lon": 105.8943108125614,
+    "type": "location",
+    "displayName": "Tòa C8",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N006",
+    "name": "Nhà ăn",
+    "lat": 20.54008200806548,
+    "lon": 105.8925102642619,
+    "type": "location",
+    "displayName": "Nhà ăn",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N007",
+    "name": "Kí Túc Quốc Phòng",
+    "lat": 20.54036422660868,
+    "lon": 105.8928756698137,
+    "type": "location",
+    "displayName": "Kí Túc Quốc Phòng",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N008",
+    "name": "Sân Đá Bóng Haui",
+    "lat": 20.54091465128633,
+    "lon": 105.8925753371496,
+    "type": "location",
+    "displayName": "Sân Đá Bóng Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N009",
+    "name": "Trang Thiết Bị Quốc Phòng Haui",
+    "lat": 20.54075711227661,
+    "lon": 105.8917837659357,
+    "type": "location",
+    "displayName": "Trang Thiết Bị Quốc Phòng Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N010",
+    "name": "Ký túc giáo viên quốc phòng",
+    "lat": 20.53948880706065,
+    "lon": 105.8921947850385,
+    "type": "location",
+    "displayName": "Ký túc giáo viên quốc phòng",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N011",
+    "name": "Routing Node 01",
+    "lat": 20.54202303068155,
+    "lon": 105.8926008433465,
+    "type": "waypoint",
+    "displayName": "Routing Node 01",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N012",
+    "name": "Văn Phòng Bảo Vệ",
+    "lat": 20.5406855720954,
+    "lon": 105.893294991067,
+    "type": "location",
+    "displayName": "Văn Phòng Bảo Vệ",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N013",
+    "name": "Routing Node 02",
+    "lat": 20.54235069630064,
+    "lon": 105.8927330429864,
+    "type": "waypoint",
+    "displayName": "Routing Node 02",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N014",
+    "name": "Routing Node 03",
+    "lat": 20.5425867259136,
+    "lon": 105.8930008015641,
+    "type": "waypoint",
+    "displayName": "Routing Node 03",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N015",
+    "name": "Routing Node 04",
+    "lat": 20.54302948245971,
+    "lon": 105.8933030818231,
+    "type": "waypoint",
+    "displayName": "Routing Node 04",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N016",
+    "name": "Routing Node 05",
+    "lat": 20.54370461104501,
+    "lon": 105.8937542361755,
+    "type": "waypoint",
+    "displayName": "Routing Node 05",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N017",
+    "name": "KTX Giảng Viên 4",
+    "lat": 20.54361189374461,
+    "lon": 105.8941465096272,
+    "type": "location",
+    "displayName": "KTX Giảng Viên 4",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N018",
+    "name": "KTX Giảng Viên 3",
+    "lat": 20.54350636599773,
+    "lon": 105.8943304148924,
+    "type": "location",
+    "displayName": "KTX Giảng Viên 3",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N019",
+    "name": "KTX Giảng Viên 2",
+    "lat": 20.54342335722653,
+    "lon": 105.894526281593,
+    "type": "location",
+    "displayName": "KTX Giảng Viên 2",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N020",
+    "name": "KTX Giảng Viên 1",
+    "lat": 20.54334308321005,
+    "lon": 105.8946793502811,
+    "type": "location",
+    "displayName": "KTX Giảng Viên 1",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N021",
+    "name": "Khu trung tâm C1-C2-C3",
+    "lat": 20.54161326741961,
+    "lon": 105.8964846805877,
+    "type": "location",
+    "displayName": "Khu trung tâm C1-C2-C3",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N022",
+    "name": "Tòa C1",
+    "lat": 20.54135617785223,
+    "lon": 105.8969289991456,
+    "type": "location",
+    "displayName": "Tòa C1",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N023",
+    "name": "Tòa C3",
+    "lat": 20.54190720478941,
+    "lon": 105.896734520564,
+    "type": "location",
+    "displayName": "Tòa C3",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N024",
+    "name": "C15",
+    "lat": 20.54467217466433,
+    "lon": 105.8957252301532,
+    "type": "location",
+    "displayName": "C15",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N025",
+    "name": "Routing Node 06",
+    "lat": 20.54444828835094,
+    "lon": 105.8958222136313,
+    "type": "waypoint",
+    "displayName": "Routing Node 06",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N026",
+    "name": "C16",
+    "lat": 20.5452055579797,
+    "lon": 105.8948884215294,
+    "type": "location",
+    "displayName": "C16",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N027",
+    "name": "Thư Viện C18",
+    "lat": 20.53868164723085,
+    "lon": 105.8930687527182,
+    "type": "location",
+    "displayName": "Thư Viện C18",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N028",
+    "name": "Hồ tình yêu",
+    "lat": 20.53864792676488,
+    "lon": 105.8938265665638,
+    "type": "location",
+    "displayName": "Hồ tình yêu",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N029",
+    "name": "Tòa C19",
+    "lat": 20.53999010579368,
+    "lon": 105.8948422081487,
+    "type": "location",
+    "displayName": "Tòa C19",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N030",
+    "name": "C17",
+    "lat": 20.54400590242534,
+    "lon": 105.8948301409924,
+    "type": "location",
+    "displayName": "C17",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N031",
+    "name": "Bãi Để Xe",
+    "lat": 20.54437937329168,
+    "lon": 105.8948768202003,
+    "type": "location",
+    "displayName": "Bãi Để Xe",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N032",
+    "name": "Routing Node 07",
+    "lat": 20.54013834120704,
+    "lon": 105.8935727534614,
+    "type": "waypoint",
+    "displayName": "Routing Node 07",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N033",
+    "name": "Cổng Phụ 1",
+    "lat": 20.53882013820335,
+    "lon": 105.8921374119272,
+    "type": "location",
+    "displayName": "Cổng Phụ 1",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N034",
+    "name": "Phòng học lý thuyết quốc phòng",
+    "lat": 20.54124093347139,
+    "lon": 105.8921043397919,
+    "type": "location",
+    "displayName": "Phòng học lý thuyết quốc phòng",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N035",
+    "name": "Tòa C2",
+    "lat": 20.5412722286292,
+    "lon": 105.8964405530837,
+    "type": "location",
+    "displayName": "Tòa C2",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N036",
+    "name": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
+    "lat": 20.54131981439443,
+    "lon": 105.8925498104261,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N037",
+    "name": "Routing Node 08",
+    "lat": 20.54056747879371,
+    "lon": 105.8951166740675,
+    "type": "waypoint",
+    "displayName": "Routing Node 08",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N038",
+    "name": "Routing Node 09",
+    "lat": 20.54120110270031,
+    "lon": 105.8958687491974,
+    "type": "waypoint",
+    "displayName": "Routing Node 09",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N039",
+    "name": "Routing Node 10",
+    "lat": 20.54224172828171,
+    "lon": 105.896569970307,
+    "type": "waypoint",
+    "displayName": "Routing Node 10",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N040",
+    "name": "Routing Node 11",
+    "lat": 20.54252885865255,
+    "lon": 105.896418364525,
+    "type": "waypoint",
+    "displayName": "Routing Node 11",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N041",
+    "name": "Routing Node 12",
+    "lat": 20.54199738139715,
+    "lon": 105.8972480116692,
+    "type": "waypoint",
+    "displayName": "Routing Node 12",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N042",
+    "name": "Routing Node 13",
+    "lat": 20.54159021847267,
+    "lon": 105.8978943092677,
+    "type": "waypoint",
+    "displayName": "Routing Node 13",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N043",
+    "name": "Routing Node 14",
+    "lat": 20.54298723851869,
+    "lon": 105.8979166157517,
+    "type": "waypoint",
+    "displayName": "Routing Node 14",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N044",
+    "name": "Routing Node 15",
+    "lat": 20.54391822868604,
+    "lon": 105.897337623302,
+    "type": "waypoint",
+    "displayName": "Routing Node 15",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N045",
+    "name": "cổng phụ 2",
+    "lat": 20.54476643373227,
+    "lon": 105.8963727617538,
+    "type": "location",
+    "displayName": "cổng phụ 2",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N046",
+    "name": "Ngã Tư",
+    "lat": 20.54318714485835,
+    "lon": 105.8952934351126,
+    "type": "location",
+    "displayName": "Ngã Tư",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N047",
+    "name": "Routing Node 16",
+    "lat": 20.54203430846426,
+    "lon": 105.8945273781024,
+    "type": "waypoint",
+    "displayName": "Routing Node 16",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N048",
+    "name": "Routing Node 17",
+    "lat": 20.54263442662791,
+    "lon": 105.8947609617021,
+    "type": "waypoint",
+    "displayName": "Routing Node 17",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N049",
+    "name": "Routing Node 18",
+    "lat": 20.54121933042452,
+    "lon": 105.893961230085,
+    "type": "waypoint",
+    "displayName": "Routing Node 18",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N050",
+    "name": "Routing Node 19",
+    "lat": 20.5407208373944,
+    "lon": 105.8936056040474,
+    "type": "waypoint",
+    "displayName": "Routing Node 19",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N051",
+    "name": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
+    "lat": 20.54112388399394,
+    "lon": 105.892940099581,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N052",
+    "name": "Routing Node 20",
+    "lat": 20.54007556043274,
+    "lon": 105.8933064731726,
+    "type": "waypoint",
+    "displayName": "Routing Node 20",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N053",
+    "name": "Routing Node 21",
+    "lat": 20.53892357470498,
+    "lon": 105.8923821062996,
+    "type": "waypoint",
+    "displayName": "Routing Node 21",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N054",
+    "name": "Routing Node 22",
+    "lat": 20.5379120671934,
+    "lon": 105.8929379715521,
+    "type": "waypoint",
+    "displayName": "Routing Node 22",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N055",
+    "name": "Routing Node 23",
+    "lat": 20.53902984515359,
+    "lon": 105.8949803672764,
+    "type": "waypoint",
+    "displayName": "Routing Node 23",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N056",
+    "name": "Routing Node 24",
+    "lat": 20.53983748973593,
+    "lon": 105.8964141167801,
+    "type": "waypoint",
+    "displayName": "Routing Node 24",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N057",
+    "name": "Routing Node 25",
+    "lat": 20.54041782814266,
+    "lon": 105.8971239570946,
+    "type": "waypoint",
+    "displayName": "Routing Node 25",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N058",
+    "name": "Routing Node 26",
+    "lat": 20.54153014916999,
+    "lon": 105.8945181844048,
+    "type": "waypoint",
+    "displayName": "Routing Node 26",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N059",
+    "name": "Routing Node 27",
+    "lat": 20.54006629027464,
+    "lon": 105.8962581718651,
+    "type": "waypoint",
+    "displayName": "Routing Node 27",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N060",
+    "name": "Routing Node 28",
+    "lat": 20.54161667485256,
+    "lon": 105.8948906006565,
+    "type": "waypoint",
+    "displayName": "Routing Node 28",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N061",
+    "name": "Routing Node 29",
+    "lat": 20.54172117789943,
+    "lon": 105.8921027225611,
+    "type": "waypoint",
+    "displayName": "Routing Node 29",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N062",
+    "name": "Routing Node 30",
+    "lat": 20.54058222117441,
+    "lon": 105.8912741285264,
+    "type": "waypoint",
+    "displayName": "Routing Node 30",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N063",
+    "name": "Ngã 3",
+    "lat": 20.54414287207872,
+    "lon": 105.8936620920049,
+    "type": "location",
+    "displayName": "Ngã 3",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N064",
+    "name": "Routing Node 31",
+    "lat": 20.54498376940929,
+    "lon": 105.8942213649182,
+    "type": "waypoint",
+    "displayName": "Routing Node 31",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N065",
+    "name": "Routing Node 32",
+    "lat": 20.5423420375575,
+    "lon": 105.8983795123135,
+    "type": "waypoint",
+    "displayName": "Routing Node 32",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N066",
+    "name": "Routing Node 33",
+    "lat": 20.54569561157667,
+    "lon": 105.8947097198241,
+    "type": "waypoint",
+    "displayName": "Routing Node 33",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N067",
+    "name": "Routing Node 34",
+    "lat": 20.54174842659524,
+    "lon": 105.8920407875214,
+    "type": "waypoint",
+    "displayName": "Routing Node 34",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N068",
+    "name": "Lối Vào/ Lối Ra KTX",
+    "lat": 20.54409985669867,
+    "lon": 105.8956980784008,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối Ra KTX",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N069",
+    "name": "Lối Vào/Lối Ra Sân Bóng KTX",
+    "lat": 20.54391800345369,
+    "lon": 105.8960391379101,
+    "type": "location",
+    "displayName": "Lối Vào/Lối Ra Sân Bóng KTX",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N070",
+    "name": "Sân bóng ktx",
+    "lat": 20.54371233050122,
+    "lon": 105.8962424771359,
+    "type": "location",
+    "displayName": "Sân bóng ktx",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N071",
+    "name": "Routing Node 35",
+    "lat": 20.54057610742105,
+    "lon": 105.8966220986728,
+    "type": "waypoint",
+    "displayName": "Routing Node 35",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N072",
+    "name": "Routing Node 36",
+    "lat": 20.54150483151576,
+    "lon": 105.8961565957172,
+    "type": "waypoint",
+    "displayName": "Routing Node 36",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N073",
+    "name": "Routing Node 37",
+    "lat": 20.54190184071252,
+    "lon": 105.896419496985,
+    "type": "waypoint",
+    "displayName": "Routing Node 37",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N074",
+    "name": "Routing Node 38",
+    "lat": 20.54137339985234,
+    "lon": 105.8946990942274,
+    "type": "waypoint",
+    "displayName": "Routing Node 38",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N075",
+    "name": "Routing Node 39",
+    "lat": 20.54080328566662,
+    "lon": 105.8952201141479,
+    "type": "waypoint",
+    "displayName": "Routing Node 39",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N076",
+    "name": "Routing Node 40",
+    "lat": 20.54115973346449,
+    "lon": 105.8954505128987,
+    "type": "waypoint",
+    "displayName": "Routing Node 40",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N077",
+    "name": "Routing Node 41",
+    "lat": 20.54051155978674,
+    "lon": 105.8957159692394,
+    "type": "waypoint",
+    "displayName": "Routing Node 41",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N078",
+    "name": "Routing Node 42",
+    "lat": 20.54087148180559,
+    "lon": 105.8959382232972,
+    "type": "waypoint",
+    "displayName": "Routing Node 42",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N079",
+    "name": "Lối vào/Lối Ra trung tâm Quốc Phòng Haui",
+    "lat": 20.54151232390761,
+    "lon": 105.8923047397721,
+    "type": "location",
+    "displayName": "Lối vào/Lối Ra trung tâm Quốc Phòng Haui",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N080",
+    "name": "Routing Node 43",
+    "lat": 20.5395877309948,
+    "lon": 105.8944656431287,
+    "type": "waypoint",
+    "displayName": "Routing Node 43",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N081",
+    "name": "Sân tập trung quốc phòng",
+    "lat": 20.54019614791904,
+    "lon": 105.8922047108373,
+    "type": "location",
+    "displayName": "Sân tập trung quốc phòng",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N082",
+    "name": "Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết",
+    "lat": 20.54100425478388,
+    "lon": 105.8919576424542,
+    "type": "location",
+    "displayName": "Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N083",
+    "name": "Căng tin",
+    "lat": 20.53924685987838,
+    "lon": 105.8944838405459,
+    "type": "location",
+    "displayName": "Căng tin",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N084",
+    "name": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "lat": 20.54344770496405,
+    "lon": 105.8947899170669,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N085",
+    "name": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "lat": 20.54355441017966,
+    "lon": 105.8946310408964,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N086",
+    "name": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "lat": 20.54367506761663,
+    "lon": 105.8944316799183,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "showOnMap": true,
+    "isTurn": false
+  },
+  {
+    "id": "N087",
+    "name": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "lat": 20.54379655490946,
+    "lon": 105.8942336362629,
+    "type": "location",
+    "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
+    "showOnMap": true,
+    "isTurn": false
+  }
+]

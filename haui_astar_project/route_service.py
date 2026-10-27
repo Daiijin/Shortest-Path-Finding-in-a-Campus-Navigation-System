@@ -4,38 +4,23 @@ from __future__ import annotations
 
 from astar import astar
 from dijkstra import dijkstra
-from graph_loader import load_graph
+from graph_loader import load_dataset, build_graph
 
-_GRAPH, _COORDINATES, _NAMES = load_graph()
+_NODES, _EDGES = load_dataset()
+_GRAPH = build_graph(_NODES, _EDGES)
+_COORDINATES = {node["id"]: (node["lat"], node["lon"]) for node in _NODES}
+_NAMES = {node["id"]: node["displayName"] for node in _NODES}
+_EDGE_BY_PAIR = {frozenset((edge["from"], edge["to"])): edge for edge in _EDGES if edge["enabled"]}
 
 
 def get_nodes() -> list[dict]:
-    """GUI metadata from the same graph used by both algorithms.
-
-    The current CSV has no type column. Its intermediate nodes are named
-    'Routing Node NN'; these stay in the graph but are not selectable places.
-    IDs are kept even when two locations share the same display name.
-    """
-    return [
-        {
-            "id": node_id,
-            "name": _NAMES[node_id],
-            "lat": _COORDINATES[node_id][0],
-            "lon": _COORDINATES[node_id][1],
-            "type": "waypoint" if _NAMES[node_id].startswith("Routing Node ") else "location",
-        }
-        for node_id in _GRAPH
-    ]
+    """Retain type, displayName, showOnMap and isTurn from the CSV."""
+    return [dict(node) for node in _NODES]
 
 
-def get_edges() -> list[dict]:
-    """One record per undirected road, retaining its supplied metre weight."""
-    return [
-        {"from": start, "to": goal, "distance": distance}
-        for start, neighbors in _GRAPH.items()
-        for goal, distance in neighbors
-        if start < goal
-    ]
+def get_edges(include_disabled: bool = False) -> list[dict]:
+    """Keep edge IDs/review metadata; closed edges are excluded by default."""
+    return [dict(edge) for edge in _EDGES if include_disabled or edge["enabled"]]
 
 
 def find_route(start: str, goal: str, algorithm: str = "astar") -> dict:
@@ -50,6 +35,9 @@ def find_route(start: str, goal: str, algorithm: str = "astar") -> dict:
 
     # Add readable names without changing the four required metrics.
     result["path_names"] = [_NAMES.get(node, node) for node in result["path"]]
+    result["path_edges"] = [dict(_EDGE_BY_PAIR[frozenset((a, b))]) for a, b in zip(result["path"], result["path"][1:])]
+    result["review_edges"] = [dict(edge) for edge in result["path_edges"] if edge["needsReview"]]
+    result["needsReview"] = bool(result["review_edges"])
     return result
 
 

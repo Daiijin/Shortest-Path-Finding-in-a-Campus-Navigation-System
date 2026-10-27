@@ -1,4 +1,5 @@
 import {Map as GLMap, Marker, NavigationControl, ScaleControl, setWorkerUrl} from '../vendor/maplibre/maplibre-gl.mjs';
+import {isEdgeEnabled, isVisibleLocation, nodeLabel} from './graph.js';
 
 setWorkerUrl('/vendor/maplibre/maplibre-gl-worker.mjs');
 const empty = () => ({type:'FeatureCollection',features:[]});
@@ -26,9 +27,9 @@ export class OpenMap {
     this.map.addControl(new NavigationControl({visualizePitch:true}),'bottom-right');
     this.map.addControl(new ScaleControl({unit:'metric'}),'bottom-left');
     this.markers=new Map();
-    for(const node of data.nodes.filter(node=>node.type==='location')) {
+    for(const node of data.nodes.filter(isVisibleLocation)) {
       const element=document.createElement('button');element.type='button';element.className='gl-campus-marker';
-      element.title=node.name+' ('+node.id+')';element.setAttribute('aria-label',element.title);
+      element.title=nodeLabel(node)+' ('+node.id+')';element.setAttribute('aria-label',element.title);
       element.addEventListener('click',event=>{event.stopPropagation();handlers.select(node.id);});
       const marker=new Marker({element,anchor:'center'}).setLngLat([node.lon,node.lat]).addTo(this.map);
       this.markers.set(node.id,{marker,element});
@@ -70,7 +71,7 @@ export class OpenMap {
     map.addLayer({id:'campus-buildings-fill',type:'fill',source:'campus-buildings',paint:{'fill-color':'#d9cdbd','fill-opacity':.75}});
     map.addLayer({id:'campus-buildings-outline',type:'line',source:'campus-buildings',paint:{'line-color':'#ac9b85','line-width':1}});
     map.addLayer({id:'campus-buildings-3d',type:'fill-extrusion',source:'campus-buildings',paint:{'fill-extrusion-color':'#d4c7b3','fill-extrusion-height':['coalesce',['get','height_m'],8],'fill-extrusion-opacity':.9}});
-    map.addSource('campus-graph',{type:'geojson',data:collection(this.data.edges.map(edge=>{const a=this.nodes.get(edge.from),b=this.nodes.get(edge.to);return line([[a.lon,a.lat],[b.lon,b.lat]]);} ))});
+    map.addSource('campus-graph',{type:'geojson',data:collection(this.data.edges.filter(isEdgeEnabled).map(edge=>{const a=this.nodes.get(edge.from),b=this.nodes.get(edge.to);return line([[a.lon,a.lat],[b.lon,b.lat]]);} ))});
     map.addLayer({id:'campus-graph',type:'line',source:'campus-graph',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#c2a754','line-width':2,'line-opacity':.55}});
     map.addSource('campus-route',{type:'geojson',data:empty()});
     for(const [id,color,width] of [['route-shadow','#124966',13],['route-border','#fff',9],['route-line','#12b9ee',6]])map.addLayer({id,type:'line',source:'campus-route',layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':color,'line-width':width,'line-opacity':id==='route-shadow'?.5:1}});

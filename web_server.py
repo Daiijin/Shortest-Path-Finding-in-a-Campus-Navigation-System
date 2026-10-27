@@ -18,9 +18,10 @@ from route_service import find_route, get_edges, get_nodes
 
 MAX_BODY = 8192
 NODES, EDGES = get_nodes(), get_edges()
+ALL_EDGES = get_edges(include_disabled=True)
 NODE_BY_ID = {node["id"]: node for node in NODES}
 LOCATIONS = {node["id"] for node in NODES if node["type"] == "location"}
-STATIC_FILES = {"index.html", "css/style.css", "js/main.js", "js/map.js", "js/open_map.js", "js/api.js", "js/location.js"}
+STATIC_FILES = {"index.html", "css/style.css", "js/main.js", "js/map.js", "js/open_map.js", "js/api.js", "js/location.js", "js/graph.js", "js/astar.js", "js/dijkstra.js", "data/campuses.json", "data/campus3/nodes.json", "data/campus3/edges.json"}
 STATIC_FILES.update("vendor/leaflet/" + name for name in [
     "leaflet.css", "leaflet.js", "leaflet.js.map", "LICENSE",
     "images/layers.png", "images/layers-2x.png", "images/marker-icon.png",
@@ -69,8 +70,10 @@ def graph_payload():
             "center": {"lat": (min(lats) + max(lats)) / 2, "lng": (min(lons) + max(lons)) / 2},
             "bounds": {"south": min(lats), "north": max(lats), "west": min(lons), "east": max(lons)},
         },
-        "nodes": NODES, "edges": EDGES,
-        "stats": {"locations": len(LOCATIONS), "nodes": len(NODES), "waypoints": len(NODES) - len(LOCATIONS), "edges": len(EDGES)},
+        "nodes": NODES, "edges": ALL_EDGES,
+        "stats": {"locations": len(LOCATIONS), "nodes": len(NODES), "waypoints": len(NODES) - len(LOCATIONS), "edges": len(EDGES),
+                  "edges_total": len(ALL_EDGES), "disabled_edges": len(ALL_EDGES)-len(EDGES),
+                  "review_edges": sum(edge["needsReview"] for edge in EDGES)},
     }
 
 

@@ -53,9 +53,30 @@ class WebsiteApiTests(unittest.TestCase):
         status, _, content = self.request("GET", "/api/graph")
         graph = json.loads(content)
         self.assertEqual(status, 200)
-        self.assertEqual(graph["stats"], {"locations": 44, "nodes": 87, "waypoints": 43, "edges": 134})
+        self.assertEqual(graph["stats"], {"locations": 44, "nodes": 87, "waypoints": 43, "edges": 128, "edges_total": 134, "disabled_edges": 6, "review_edges": 23})
         self.assertEqual(graph["nodes"], web_server.get_nodes())
-        self.assertEqual(graph["edges"], web_server.get_edges())
+        self.assertEqual(graph["edges"], web_server.get_edges(include_disabled=True))
+
+    def test_disabled_roads_are_not_in_routes_and_review_metadata_is_retained(self):
+        for algorithm in ['astar','dijkstra']:
+            status,result=self.post_route(start='N001',goal='N017',algorithm=algorithm)
+            self.assertEqual(status,200)
+            self.assertAlmostEqual(result['distance'],688.2)
+            self.assertTrue({'E006','E015','E058','E062','E087','E092'}.isdisjoint(edge['id'] for edge in result['path_edges']))
+            self.assertTrue(all(edge['enabled'] for edge in result['path_edges']))
+        status,result=self.post_route(start='N001',goal='N017',algorithm='astar')
+        self.assertAlmostEqual(result['distance'],688.2)
+        self.assertEqual(len(result['path']),16)
+        self.assertEqual(result['needsReview'],bool(result['review_edges']))
+        self.assertTrue(result['needsReview'])
+        self.assertEqual([edge['id'] for edge in result['review_edges']],['E096'])
+        self.assertTrue(all(edge['needsReview'] and edge['reviewReason'] for edge in result['review_edges']))
+
+    def test_static_javascript_dataset_matches_python_api(self):
+        for file_name,payload in [('nodes',web_server.get_nodes()),('edges',web_server.get_edges(include_disabled=True))]:
+            status,_,content=self.request('GET',f'/data/campus3/{file_name}.json')
+            self.assertEqual(status,200)
+            self.assertEqual(json.loads(content),payload)
 
     def test_building_footprints_have_real_closed_coordinate_rings(self):
         status, _, content = self.request("GET", "/api/buildings")

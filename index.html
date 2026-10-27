@@ -32,7 +32,7 @@
   <main class="page">
     <section class="intro" aria-labelledby="pageTitle">
       <div><p class="eyebrow">CAMPUS NAVIGATION SYSTEM</p><h1 id="pageTitle">Khám phá campus, tìm đường dễ dàng.</h1><p class="intro-description">Chọn nơi xuất phát và điểm đến. Để A* và Dijkstra tìm lộ trình cho bạn.</p></div>
-      <div class="dataset-summary" aria-label="Dữ liệu khuôn viên"><div><strong id="locationCount">—</strong><span>địa điểm</span></div><div><strong id="nodeCount">—</strong><span>node</span></div><div><strong id="edgeCount">—</strong><span>đoạn đường</span></div></div>
+      <div class="dataset-summary" aria-label="Dữ liệu khuôn viên"><div><strong id="locationCount">—</strong><span>địa điểm</span></div><div><strong id="nodeCount">—</strong><span>node</span></div><div><strong id="edgeCount">—</strong><span>đường đang mở</span></div></div>
     </section>
     <section class="workspace" id="workspace" aria-label="Tìm đường trong khuôn viên">
       <aside class="control-card card">
@@ -61,7 +61,7 @@
       <aside class="result-card card" aria-labelledby="resultTitle">
         <div class="card-title"><span class="section-number">02</span><h2 id="resultTitle">Kết quả tìm đường</h2></div>
         <div id="resultEmpty" class="result-empty"><span class="empty-route-icon"><svg><use href="#i-route"/></svg></span><h3>Lộ trình của bạn<br>bắt đầu từ đây.</h3><p>Chọn hai địa điểm và bấm<br><strong>Tìm đường</strong> để xem kết quả.</p><div class="empty-steps"><span>A</span><i></i><span>B</span></div></div>
-        <div id="resultContent" class="result-content" hidden><div class="result-state"><span id="resultState">Đã tìm thấy lộ trình</span><span class="algorithm-badge" id="resultAlgorithm">A*</span></div><div class="distance-metric"><span>Tổng khoảng cách</span><strong id="distance">—</strong><small>Trọng số đường đi trong dataset</small></div><div class="metrics-grid"><div><svg><use href="#i-layers"/></svg><strong id="visited">—</strong><span>Node đã duyệt</span></div><div><svg><use href="#i-clock"/></svg><strong id="time">—</strong><span>Thời gian xử lý</span></div></div><div class="route-list-heading"><h3>Các điểm đi qua</h3><span id="pathCount">—</span></div><label class="waypoint-toggle"><input id="showWaypoints" type="checkbox">Hiện điểm trung gian</label><ol id="routeList" class="route-list"></ol></div>
+        <div id="resultContent" class="result-content" hidden><div class="result-state"><span id="resultState">Đã tìm thấy lộ trình</span><span class="algorithm-badge" id="resultAlgorithm">A*</span></div><div class="distance-metric"><span>Tổng khoảng cách</span><strong id="distance">—</strong><small>Trọng số đường đi trong dataset</small></div><div class="metrics-grid"><div><svg><use href="#i-layers"/></svg><strong id="visited">—</strong><span>Node đã duyệt</span></div><div><svg><use href="#i-clock"/></svg><strong id="time">—</strong><span>Thời gian xử lý</span></div></div><details id="routeReview" class="route-review" hidden><summary id="reviewSummary"></summary><ul id="reviewEdges"></ul></details><div class="route-list-heading"><h3>Các điểm đi qua</h3><span id="pathCount">—</span></div><label class="waypoint-toggle"><input id="showWaypoints" type="checkbox">Hiện điểm trung gian</label><ol id="routeList" class="route-list"></ol></div>
         <p class="result-note"><svg><use href="#i-info"/></svg><span>Kết quả được tính trực tiếp bằng thuật toán Python của nhóm.</span></p>
       </aside>
     </section>

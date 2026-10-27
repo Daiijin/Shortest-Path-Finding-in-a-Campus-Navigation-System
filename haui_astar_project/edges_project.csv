@@ -1,135 +1,135 @@
-﻿Edge_ID,From_Node,From_Name,To_Node,To_Name,Distance_m
-E001,N001,Cổng Chính Haui,N002,Vườn hoa,66.4
-E002,N001,Cổng Chính Haui,N056,Routing Node 24,55.6
-E003,N001,Cổng Chính Haui,N057,Routing Node 25,46.6
-E004,N001,Cổng Chính Haui,N059,Routing Node 27,66.2
-E005,N001,Cổng Chính Haui,N071,Routing Node 35,64
-E006,N002,Vườn hoa,N038,Routing Node 09,102.6
-E007,N002,Vườn hoa,N056,Routing Node 24,63
-E008,N002,Vườn hoa,N059,Routing Node 27,39.4
-E009,N002,Vườn hoa,N071,Routing Node 35,32
-E010,N002,Vườn hoa,N078,Routing Node 42,68.8
-E011,N003,Đài phun nước trung tâm,N047,Routing Node 16,50.8
-E012,N003,Đài phun nước trung tâm,N058,Routing Node 26,31.4
-E013,N003,Đài phun nước trung tâm,N060,Routing Node 28,67
-E014,N003,Đài phun nước trung tâm,N074,Routing Node 38,56.4
-E015,N003,Đài phun nước trung tâm,N075,Routing Node 39,138.5
-E016,N004,Tòa C7,N005,Tòa C8,61
-E017,N004,Tòa C7,N029,Tòa C19,93.2
-E018,N004,Tòa C7,N050,Routing Node 19,67.4
-E019,N006,Nhà ăn,N007,Kí Túc Quốc Phòng,49.3
-E020,N006,Nhà ăn,N008,Sân Đá Bóng Haui,92.4
-E021,N006,Nhà ăn,N081,Sân tập trung quốc phòng,34.3
-E022,N007,Kí Túc Quốc Phòng,N008,Sân Đá Bóng Haui,68.5
-E023,N007,Kí Túc Quốc Phòng,N010,Ký túc giáo viên quốc phòng,120.1
-E024,N007,Kí Túc Quốc Phòng,N012,Văn Phòng Bảo Vệ,56.4
-E025,N007,Kí Túc Quốc Phòng,N052,Routing Node 20,55.1
-E026,N008,Sân Đá Bóng Haui,N009,Trang Thiết Bị Quốc Phòng Haui,84.3
-E027,N008,Sân Đá Bóng Haui,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,44.5
-E028,N009,Trang Thiết Bị Quốc Phòng Haui,N034,Phòng học lý thuyết quốc phòng,63.1
-E029,N009,Trang Thiết Bị Quốc Phòng Haui,N062,Routing Node 30,56.5
-E030,N009,Trang Thiết Bị Quốc Phòng Haui,N082,Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết,32.8
-E031,N010,Ký túc giáo viên quốc phòng,N033,Cổng Phụ 1,74.2
-E032,N010,Ký túc giáo viên quốc phòng,N052,Routing Node 20,132.9
-E033,N010,Ký túc giáo viên quốc phòng,N053,Routing Node 21,65.5
-E034,N010,Ký túc giáo viên quốc phòng,N062,Routing Node 30,154.5
-E035,N010,Ký túc giáo viên quốc phòng,N081,Sân tập trung quốc phòng,78.3
-E036,N011,Routing Node 01,N013,Routing Node 02,38.8
-E037,N011,Routing Node 01,N067,Routing Node 34,65.8
-E038,N012,Văn Phòng Bảo Vệ,N050,Routing Node 19,32.6
-E039,N012,Văn Phòng Bảo Vệ,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,61
-E040,N013,Routing Node 02,N014,Routing Node 03,38.2
-E041,N014,Routing Node 03,N015,Routing Node 04,58.3
-E042,N015,Routing Node 04,N016,Routing Node 05,88.3
-E043,N016,Routing Node 05,N064,Routing Node 31,149.7
-E044,N017,KTX Giảng Viên 4,N086,Lối Vào/ Lối ra KTX Giáo Viên,30.5
-E045,N017,KTX Giảng Viên 4,N087,Lối Vào/ Lối ra KTX Giáo Viên,22.4
-E046,N018,KTX Giảng Viên 3,N019,KTX Giảng Viên 2,22.4
-E047,N018,KTX Giảng Viên 3,N086,Lối Vào/ Lối ra KTX Giáo Viên,21.4
-E048,N019,KTX Giảng Viên 2,N085,Lối Vào/ Lối ra KTX Giáo Viên,18.2
-E049,N019,KTX Giảng Viên 2,N086,Lối Vào/ Lối ra KTX Giáo Viên,29.6
-E050,N020,KTX Giảng Viên 1,N084,Lối Vào/ Lối ra KTX Giáo Viên,16.3
-E051,N020,KTX Giảng Viên 1,N085,Lối Vào/ Lối ra KTX Giáo Viên,23.9
-E052,N021,Khu trung tâm C1-C2-C3,N022,Tòa C1,54.4
-E053,N021,Khu trung tâm C1-C2-C3,N023,Tòa C3,41.7
-E054,N021,Khu trung tâm C1-C2-C3,N072,Routing Node 36,36.2
-E055,N021,Khu trung tâm C1-C2-C3,N073,Routing Node 37,32.7
-E056,N022,Tòa C1,N035,Tòa C2,51.8
-E057,N023,Tòa C3,N039,Routing Node 10,40.8
-E058,N023,Tòa C3,N040,Routing Node 11,76.3
-E059,N023,Tòa C3,N041,Routing Node 12,54.5
-E060,N023,Tòa C3,N073,Routing Node 37,32.8
-E061,N024,C15,N025,Routing Node 06,26.8
-E062,N024,C15,N069,Lối Vào/Lối Ra Sân Bóng KTX,89.7
-E063,N025,Routing Node 06,N045,cổng phụ 2,67.3
-E064,N025,Routing Node 06,N069,Lối Vào/Lối Ra Sân Bóng KTX,62.9
-E065,N026,C16,N031,Bãi Để Xe,91.4
-E066,N026,C16,N064,Routing Node 31,73.7
-E067,N027,Thư Viện C18,N054,Routing Node 22,86.3
-E068,N027,Thư Viện C18,N080,Routing Node 43,176.8
-E069,N028,Hồ tình yêu,N054,Routing Node 22,123.4
-E070,N028,Hồ tình yêu,N055,Routing Node 23,127.5
-E071,N029,Tòa C19,N037,Routing Node 08,70
-E072,N029,Tòa C19,N080,Routing Node 43,59.4
-E073,N030,C17,N031,Bãi Để Xe,41.6
-E074,N031,Bãi Để Xe,N068,Lối Vào/ Lối Ra KTX,91
-E075,N031,Bãi Để Xe,N087,Lối Vào/ Lối ra KTX Giáo Viên,93
-E076,N032,Routing Node 07,N050,Routing Node 19,64.6
-E077,N032,Routing Node 07,N052,Routing Node 20,28.6
-E078,N032,Routing Node 07,N083,Căng tin,137
-E079,N033,Cổng Phụ 1,N053,Routing Node 21,28
-E080,N033,Cổng Phụ 1,N054,Routing Node 22,130.6
-E081,N034,Phòng học lý thuyết quốc phòng,N067,Routing Node 34,56.6
-E082,N034,Phòng học lý thuyết quốc phòng,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,36.6
-E083,N034,Phòng học lý thuyết quốc phòng,N082,Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết,30.3
-E084,N035,Tòa C2,N072,Routing Node 36,39.2
-E085,N036,Lối Vào/ Lối Ra Sân Đá Bóng Haui,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,46.1
-E086,N036,Lối Vào/ Lối Ra Sân Đá Bóng Haui,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,33.3
-E087,N037,Routing Node 08,N060,Routing Node 28,118.5
-E088,N037,Routing Node 08,N075,Routing Node 39,28.2
-E089,N037,Routing Node 08,N077,Routing Node 41,62.8
-E090,N038,Routing Node 09,N072,Routing Node 36,45.1
-E091,N038,Routing Node 09,N076,Routing Node 40,43.8
-E092,N038,Routing Node 09,N077,Routing Node 41,78
-E093,N038,Routing Node 09,N078,Routing Node 42,37.2
-E094,N039,Routing Node 10,N040,Routing Node 11,35.5
-E095,N040,Routing Node 11,N044,Routing Node 15,181.2
-E096,N040,Routing Node 11,N046,Ngã Tư,138.1
-E097,N041,Routing Node 12,N042,Routing Node 13,81.1
-E098,N041,Routing Node 12,N043,Routing Node 14,129.9
-E099,N042,Routing Node 13,N057,Routing Node 25,152.6
-E100,N042,Routing Node 13,N065,Routing Node 32,97.4
-E101,N043,Routing Node 14,N044,Routing Node 15,119.4
-E102,N043,Routing Node 14,N065,Routing Node 32,86.2
-E103,N044,Routing Node 15,N045,cổng phụ 2,137.6
-E104,N045,cổng phụ 2,N066,Routing Node 33,201.6
-E105,N046,Ngã Tư,N048,Routing Node 17,82.6
-E106,N046,Ngã Tư,N068,Lối Vào/ Lối Ra KTX,109.5
-E107,N046,Ngã Tư,N084,Lối Vào/ Lối ra KTX Giáo Viên,59.9
-E108,N047,Routing Node 16,N048,Routing Node 17,70.7
-E109,N047,Routing Node 16,N049,Routing Node 18,107.8
-E110,N048,Routing Node 17,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,253
-E111,N049,Routing Node 18,N050,Routing Node 19,66.5
-E112,N052,Routing Node 20,N053,Routing Node 21,159.8
-E113,N055,Routing Node 23,N059,Routing Node 27,175.8
-E114,N055,Routing Node 23,N083,Căng tin,57.1
-E115,N056,Routing Node 24,N059,Routing Node 27,30.1
-E116,N058,Routing Node 26,N060,Routing Node 28,40
-E117,N058,Routing Node 26,N074,Routing Node 38,25.6
-E118,N059,Routing Node 27,N077,Routing Node 41,75
-E119,N060,Routing Node 28,N074,Routing Node 38,33.5
-E120,N060,Routing Node 28,N076,Routing Node 40,77.2
-E121,N061,Routing Node 29,N067,Routing Node 34,7.1
-E122,N061,Routing Node 29,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,31.3
-E123,N063,Ngã 3,N087,Lối Vào/ Lối ra KTX Giáo Viên,70.8
-E124,N064,Routing Node 31,N066,Routing Node 33,93.8
-E125,N068,Lối Vào/ Lối Ra KTX,N069,Lối Vào/Lối Ra Sân Bóng KTX,40.9
-E126,N068,Lối Vào/ Lối Ra KTX,N084,Lối Vào/ Lối ra KTX Giáo Viên,119.1
-E127,N069,Lối Vào/Lối Ra Sân Bóng KTX,N070,Sân bóng ktx,31.1
-E128,N071,Routing Node 35,N078,Routing Node 42,78.4
-E129,N072,Routing Node 36,N073,Routing Node 37,51.8
-E130,N075,Routing Node 39,N076,Routing Node 40,46.2
-E131,N076,Routing Node 40,N078,Routing Node 42,60
-E132,N077,Routing Node 41,N078,Routing Node 42,46.1
-E133,N080,Routing Node 43,N083,Căng tin,37.8
-E134,N086,Lối Vào/ Lối ra KTX Giáo Viên,N087,Lối Vào/ Lối ra KTX Giáo Viên,24.6
+﻿id,from,fromName,to,toName,distance,enabled,needsReview,reviewReason
+E001,N001,Cổng Chính Haui,N002,Vườn hoa,66.4,True,False,
+E002,N001,Cổng Chính Haui,N056,Routing Node 24,55.6,True,False,
+E003,N001,Cổng Chính Haui,N057,Routing Node 25,46.6,True,False,
+E004,N001,Cổng Chính Haui,N059,Routing Node 27,66.2,True,True,Giao hình học với E007
+E005,N001,Cổng Chính Haui,N071,Routing Node 35,64.0,True,False,
+E006,N002,Vườn hoa,N038,Routing Node 09,102.6,False,True,Giao hình học với E128; TẠM KHÓA: có lộ trình qua các node khác (106.0 m thay cho 102.6 m); chưa xác nhận thực địa
+E007,N002,Vườn hoa,N056,Routing Node 24,63.0,True,True,Giao hình học với E004
+E008,N002,Vườn hoa,N059,Routing Node 27,39.4,True,False,
+E009,N002,Vườn hoa,N071,Routing Node 35,32.0,True,False,
+E010,N002,Vườn hoa,N078,Routing Node 42,68.8,True,False,
+E011,N003,Đài phun nước trung tâm,N047,Routing Node 16,50.8,True,False,
+E012,N003,Đài phun nước trung tâm,N058,Routing Node 26,31.4,True,True,Giao hình học với E109
+E013,N003,Đài phun nước trung tâm,N060,Routing Node 28,67.0,True,True,Giao hình học với E109
+E014,N003,Đài phun nước trung tâm,N074,Routing Node 38,56.4,True,True,Giao hình học với E109
+E015,N003,Đài phun nước trung tâm,N075,Routing Node 39,138.5,False,True,"Giao hình học với E087, E109; TẠM KHÓA: có lộ trình qua các node khác (190.4 m thay cho 138.5 m); chưa xác nhận thực địa"
+E016,N004,Tòa C7,N005,Tòa C8,61.0,True,False,
+E017,N004,Tòa C7,N029,Tòa C19,93.2,True,False,
+E018,N004,Tòa C7,N050,Routing Node 19,67.4,True,False,
+E019,N006,Nhà ăn,N007,Kí Túc Quốc Phòng,49.3,True,False,
+E020,N006,Nhà ăn,N008,Sân Đá Bóng Haui,92.4,True,False,
+E021,N006,Nhà ăn,N081,Sân tập trung quốc phòng,34.3,True,False,
+E022,N007,Kí Túc Quốc Phòng,N008,Sân Đá Bóng Haui,68.5,True,False,
+E023,N007,Kí Túc Quốc Phòng,N010,Ký túc giáo viên quốc phòng,120.1,True,False,
+E024,N007,Kí Túc Quốc Phòng,N012,Văn Phòng Bảo Vệ,56.4,True,False,
+E025,N007,Kí Túc Quốc Phòng,N052,Routing Node 20,55.1,True,False,
+E026,N008,Sân Đá Bóng Haui,N009,Trang Thiết Bị Quốc Phòng Haui,84.3,True,False,
+E027,N008,Sân Đá Bóng Haui,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,44.5,True,False,
+E028,N009,Trang Thiết Bị Quốc Phòng Haui,N034,Phòng học lý thuyết quốc phòng,63.1,True,False,
+E029,N009,Trang Thiết Bị Quốc Phòng Haui,N062,Routing Node 30,56.5,True,False,
+E030,N009,Trang Thiết Bị Quốc Phòng Haui,N082,Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết,32.8,True,False,
+E031,N010,Ký túc giáo viên quốc phòng,N033,Cổng Phụ 1,74.2,True,False,
+E032,N010,Ký túc giáo viên quốc phòng,N052,Routing Node 20,132.9,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E033,N010,Ký túc giáo viên quốc phòng,N053,Routing Node 21,65.5,True,False,
+E034,N010,Ký túc giáo viên quốc phòng,N062,Routing Node 30,154.5,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E035,N010,Ký túc giáo viên quốc phòng,N081,Sân tập trung quốc phòng,78.3,True,False,
+E036,N011,Routing Node 01,N013,Routing Node 02,38.8,True,False,
+E037,N011,Routing Node 01,N067,Routing Node 34,65.8,True,False,
+E038,N012,Văn Phòng Bảo Vệ,N050,Routing Node 19,32.6,True,False,
+E039,N012,Văn Phòng Bảo Vệ,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,61.0,True,False,
+E040,N013,Routing Node 02,N014,Routing Node 03,38.2,True,False,
+E041,N014,Routing Node 03,N015,Routing Node 04,58.3,True,False,
+E042,N015,Routing Node 04,N016,Routing Node 05,88.3,True,False,
+E043,N016,Routing Node 05,N064,Routing Node 31,149.7,True,True,Giao hình học với E123; Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E044,N017,KTX Giảng Viên 4,N086,Lối Vào/ Lối ra KTX Giáo Viên,30.5,True,False,
+E045,N017,KTX Giảng Viên 4,N087,Lối Vào/ Lối ra KTX Giáo Viên,22.4,True,False,
+E046,N018,KTX Giảng Viên 3,N019,KTX Giảng Viên 2,22.4,True,False,
+E047,N018,KTX Giảng Viên 3,N086,Lối Vào/ Lối ra KTX Giáo Viên,21.4,True,False,
+E048,N019,KTX Giảng Viên 2,N085,Lối Vào/ Lối ra KTX Giáo Viên,18.2,True,False,
+E049,N019,KTX Giảng Viên 2,N086,Lối Vào/ Lối ra KTX Giáo Viên,29.6,True,False,
+E050,N020,KTX Giảng Viên 1,N084,Lối Vào/ Lối ra KTX Giáo Viên,16.3,True,False,
+E051,N020,KTX Giảng Viên 1,N085,Lối Vào/ Lối ra KTX Giáo Viên,23.9,True,False,
+E052,N021,Khu trung tâm C1-C2-C3,N022,Tòa C1,54.4,True,False,
+E053,N021,Khu trung tâm C1-C2-C3,N023,Tòa C3,41.7,True,False,
+E054,N021,Khu trung tâm C1-C2-C3,N072,Routing Node 36,36.2,True,False,
+E055,N021,Khu trung tâm C1-C2-C3,N073,Routing Node 37,32.7,True,False,
+E056,N022,Tòa C1,N035,Tòa C2,51.8,True,False,
+E057,N023,Tòa C3,N039,Routing Node 10,40.8,True,False,
+E058,N023,Tòa C3,N040,Routing Node 11,76.3,False,False,Đã có đường thay thế đi qua waypoint N039; khóa đoạn nối tắt trùng tuyến
+E059,N023,Tòa C3,N041,Routing Node 12,54.5,True,False,
+E060,N023,Tòa C3,N073,Routing Node 37,32.8,True,False,
+E061,N024,C15,N025,Routing Node 06,26.8,True,False,
+E062,N024,C15,N069,Lối Vào/Lối Ra Sân Bóng KTX,89.7,False,False,Đã có đường thay thế đi qua waypoint N025; khóa đoạn nối tắt trùng tuyến
+E063,N025,Routing Node 06,N045,cổng phụ 2,67.3,True,False,
+E064,N025,Routing Node 06,N069,Lối Vào/Lối Ra Sân Bóng KTX,62.9,True,False,
+E065,N026,C16,N031,Bãi Để Xe,91.4,True,False,
+E066,N026,C16,N064,Routing Node 31,73.7,True,False,
+E067,N027,Thư Viện C18,N054,Routing Node 22,86.3,True,False,
+E068,N027,Thư Viện C18,N080,Routing Node 43,176.8,True,True,Giao hình học với E078; Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E069,N028,Hồ tình yêu,N054,Routing Node 22,123.4,True,False,
+E070,N028,Hồ tình yêu,N055,Routing Node 23,127.5,True,False,
+E071,N029,Tòa C19,N037,Routing Node 08,70.0,True,False,
+E072,N029,Tòa C19,N080,Routing Node 43,59.4,True,False,
+E073,N030,C17,N031,Bãi Để Xe,41.6,True,False,
+E074,N031,Bãi Để Xe,N068,Lối Vào/ Lối Ra KTX,91.0,True,False,
+E075,N031,Bãi Để Xe,N087,Lối Vào/ Lối ra KTX Giáo Viên,93.0,True,False,
+E076,N032,Routing Node 07,N050,Routing Node 19,64.6,True,False,
+E077,N032,Routing Node 07,N052,Routing Node 20,28.6,True,False,
+E078,N032,Routing Node 07,N083,Căng tin,137.0,True,True,Giao hình học với E068; Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E079,N033,Cổng Phụ 1,N053,Routing Node 21,28.0,True,False,
+E080,N033,Cổng Phụ 1,N054,Routing Node 22,130.6,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E081,N034,Phòng học lý thuyết quốc phòng,N067,Routing Node 34,56.6,True,False,
+E082,N034,Phòng học lý thuyết quốc phòng,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,36.6,True,False,
+E083,N034,Phòng học lý thuyết quốc phòng,N082,Lối Vào/Lối Ra Trang Thiết Bị Quốc Phòng / Lối Vào/Lối Ra phòng học Lí Thuyết,30.3,True,False,
+E084,N035,Tòa C2,N072,Routing Node 36,39.2,True,False,
+E085,N036,Lối Vào/ Lối Ra Sân Đá Bóng Haui,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,46.1,True,False,
+E086,N036,Lối Vào/ Lối Ra Sân Đá Bóng Haui,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,33.3,True,False,
+E087,N037,Routing Node 08,N060,Routing Node 28,118.5,False,True,Giao hình học với E015; TẠM KHÓA: có lộ trình qua các node khác (151.6 m thay cho 118.5 m); chưa xác nhận thực địa
+E088,N037,Routing Node 08,N075,Routing Node 39,28.2,True,False,
+E089,N037,Routing Node 08,N077,Routing Node 41,62.8,True,False,
+E090,N038,Routing Node 09,N072,Routing Node 36,45.1,True,False,
+E091,N038,Routing Node 09,N076,Routing Node 40,43.8,True,False,
+E092,N038,Routing Node 09,N077,Routing Node 41,78.0,False,True,Giao hình học với E131; TẠM KHÓA: có lộ trình qua các node khác (83.3 m thay cho 78.0 m); chưa xác nhận thực địa
+E093,N038,Routing Node 09,N078,Routing Node 42,37.2,True,False,
+E094,N039,Routing Node 10,N040,Routing Node 11,35.5,True,False,
+E095,N040,Routing Node 11,N044,Routing Node 15,181.2,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E096,N040,Routing Node 11,N046,Ngã Tư,138.1,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E097,N041,Routing Node 12,N042,Routing Node 13,81.1,True,False,
+E098,N041,Routing Node 12,N043,Routing Node 14,129.9,True,False,
+E099,N042,Routing Node 13,N057,Routing Node 25,152.6,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E100,N042,Routing Node 13,N065,Routing Node 32,97.4,True,False,
+E101,N043,Routing Node 14,N044,Routing Node 15,119.4,True,False,
+E102,N043,Routing Node 14,N065,Routing Node 32,86.2,True,False,
+E103,N044,Routing Node 15,N045,cổng phụ 2,137.6,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E104,N045,cổng phụ 2,N066,Routing Node 33,201.6,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E105,N046,Ngã Tư,N048,Routing Node 17,82.6,True,False,
+E106,N046,Ngã Tư,N068,Lối Vào/ Lối Ra KTX,109.5,True,False,
+E107,N046,Ngã Tư,N084,Lối Vào/ Lối ra KTX Giáo Viên,59.9,True,False,
+E108,N047,Routing Node 16,N048,Routing Node 17,70.7,True,False,
+E109,N047,Routing Node 16,N049,Routing Node 18,107.8,True,True,"Giao hình học với E012, E013, E014, E015"
+E110,N048,Routing Node 17,N051,Lối Vào/ Lối Ra Sân Đá Bóng Haui,253.0,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E111,N049,Routing Node 18,N050,Routing Node 19,66.5,True,False,
+E112,N052,Routing Node 20,N053,Routing Node 21,159.8,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E113,N055,Routing Node 23,N059,Routing Node 27,175.8,True,True,Cạnh dài ≥130m: cần đối chiếu lối đi trên ảnh vệ tinh
+E114,N055,Routing Node 23,N083,Căng tin,57.1,True,False,
+E115,N056,Routing Node 24,N059,Routing Node 27,30.1,True,False,
+E116,N058,Routing Node 26,N060,Routing Node 28,40.0,True,False,
+E117,N058,Routing Node 26,N074,Routing Node 38,25.6,True,False,
+E118,N059,Routing Node 27,N077,Routing Node 41,75.0,True,False,
+E119,N060,Routing Node 28,N074,Routing Node 38,33.5,True,False,
+E120,N060,Routing Node 28,N076,Routing Node 40,77.2,True,False,
+E121,N061,Routing Node 29,N067,Routing Node 34,7.1,True,False,
+E122,N061,Routing Node 29,N079,Lối vào/Lối Ra trung tâm Quốc Phòng Haui,31.3,True,False,
+E123,N063,Ngã 3,N087,Lối Vào/ Lối ra KTX Giáo Viên,70.8,True,True,Giao hình học với E043
+E124,N064,Routing Node 31,N066,Routing Node 33,93.8,True,False,
+E125,N068,Lối Vào/ Lối Ra KTX,N069,Lối Vào/Lối Ra Sân Bóng KTX,40.9,True,False,
+E126,N068,Lối Vào/ Lối Ra KTX,N084,Lối Vào/ Lối ra KTX Giáo Viên,119.1,True,False,
+E127,N069,Lối Vào/Lối Ra Sân Bóng KTX,N070,Sân bóng ktx,31.1,True,False,
+E128,N071,Routing Node 35,N078,Routing Node 42,78.4,True,True,Giao hình học với E006
+E129,N072,Routing Node 36,N073,Routing Node 37,51.8,True,False,
+E130,N075,Routing Node 39,N076,Routing Node 40,46.2,True,False,
+E131,N076,Routing Node 40,N078,Routing Node 42,60.0,True,True,Giao hình học với E092
+E132,N077,Routing Node 41,N078,Routing Node 42,46.1,True,False,
+E133,N080,Routing Node 43,N083,Căng tin,37.8,True,False,
+E134,N086,Lối Vào/ Lối ra KTX Giáo Viên,N087,Lối Vào/ Lối ra KTX Giáo Viên,24.6,True,False,

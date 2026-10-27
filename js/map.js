@@ -1,3 +1,4 @@
+import {isEdgeEnabled, isVisibleLocation, nodeLabel} from './graph.js';
 const BLUE = '#235ce1';
 const ORANGE = '#f28b46';
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -52,7 +53,7 @@ function pinContent(node, start, goal, labels) {
   if (selected || labels) {
     const label = document.createElement('div');
     label.className = 'map-pin-label' + (!selected ? ' is-node-label' : '');
-    label.textContent = selected ? node.name : node.id;
+    label.textContent = selected ? nodeLabel(node) : node.id;
     pin.append(label);
   }
   return pin;
@@ -102,16 +103,16 @@ class LeafletMap {
         layer.bindTooltip(label,{direction:'top'});
       },
     }).addTo(this.map);
-    for (const edge of data.edges) {
+    for (const edge of data.edges.filter(isEdgeEnabled)) {
       const a = this.nodes.get(edge.from), b = this.nodes.get(edge.to);
       L.polyline([[a.lat, a.lon], [b.lat, b.lon]], {color: '#b69536', weight: 2, opacity: .55,interactive:false})
         .addTo(this.edgeLayer);
     }
     this.markers = new Map();
-    for (const node of data.nodes.filter(node => node.type === 'location')) {
+    for (const node of data.nodes.filter(isVisibleLocation)) {
       const tooltip = document.createElement('span');
-      tooltip.textContent = node.name + ' · ' + node.id;
-      const marker = L.marker([node.lat, node.lon], {title: node.name + ' (' + node.id + ')', keyboard: true})
+      tooltip.textContent = nodeLabel(node) + ' · ' + node.id;
+      const marker = L.marker([node.lat, node.lon], {title: nodeLabel(node) + ' (' + node.id + ')', keyboard: true})
         .bindTooltip(tooltip, {direction: 'top', offset: [0, -8]})
         .on('click', () => handlers.select(node.id)).addTo(this.map);
       this.markers.set(node.id, marker);
@@ -197,7 +198,7 @@ class GoogleMap {
       map:this.map,paths:feature.geometry.coordinates.map(ring=>ring.map(([lng,lat])=>({lat,lng}))),
       strokeColor:'#ffffff',strokeWeight:1,strokeOpacity:.7,fillColor:'#ffffff',fillOpacity:.04,clickable:false,zIndex:1,
     }));
-    this.edges = data.edges.map(edge => {
+    this.edges = data.edges.filter(isEdgeEnabled).map(edge => {
       const a = this.nodes.get(edge.from), b = this.nodes.get(edge.to);
       return new window.google.maps.Polyline({
         map: this.map, path: [{lat:a.lat,lng:a.lon}, {lat:b.lat,lng:b.lon}],
@@ -205,9 +206,9 @@ class GoogleMap {
       });
     });
     this.markers = new Map();
-    for (const node of data.nodes.filter(node => node.type === 'location')) {
+    for (const node of data.nodes.filter(isVisibleLocation)) {
       const marker = new libraries.AdvancedMarkerElement({
-        map: this.map, position: {lat:node.lat,lng:node.lon}, title: node.name + ' (' + node.id + ')',
+        map: this.map, position: {lat:node.lat,lng:node.lon}, title: nodeLabel(node) + ' (' + node.id + ')',
         gmpClickable: true, anchorLeft:'-50%',anchorTop:'-50%',
       });
       marker.append(pinContent(node, null, null, false));
@@ -301,7 +302,7 @@ class DiagramMap {
       const polygon=svgElement('polygon',{points,fill:'#e2d5c3',stroke:'#ac9d88','stroke-width':1.3,'vector-effect':'non-scaling-stroke','data-building-id':feature.id});
       polygon.append(svgElement('title',{},feature.properties.name));this.buildingLayer.append(polygon);
     }
-    for (const edge of data.edges) {
+    for (const edge of data.edges.filter(isEdgeEnabled)) {
       const a = this.points.get(edge.from), b = this.points.get(edge.to);
       this.edgeLayer.append(svgElement('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#fff','stroke-width':4,'vector-effect':'non-scaling-stroke'}),
         svgElement('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#a9bbb5','stroke-opacity':.6,'stroke-width':1.5,'vector-effect':'non-scaling-stroke'}));
@@ -374,17 +375,18 @@ class DiagramMap {
     this.currentSelection=[start,goal,labels];
     const units=this.unitsPerPixel();
     this.markerLayer.replaceChildren();
-    for (const node of this.data.nodes.filter(n=>n.type==='location')) {
+    for (const node of this.data.nodes.filter(isVisibleLocation)) {
       const p = this.points.get(node.id), selected = node.id === start || node.id === goal;
       const color = node.id === start ? BLUE : node.id === goal ? ORANGE : '#6487b6';
       const group = svgElement('g',{class:'diagram-location',transform:'translate('+p[0]+','+p[1]+') scale('+units+')'});
-      group.append(svgElement('title',{},node.name+' · '+node.id));
+      group.append(svgElement('title',{},nodeLabel(node)+' · '+node.id));
       if (selected) group.append(svgElement('circle',{r:16,fill:color,'fill-opacity':.15,stroke:color,'stroke-width':1}));
       group.append(svgElement('circle',{r:selected?10:6,fill:color,stroke:'white','stroke-width':2}));
       if (selected) group.append(svgElement('text',{y:4,'text-anchor':'middle',fill:'white','font-size':11,'font-weight':700,stroke:'none'}, start===goal?'AB':node.id===start?'A':'B'));
-      const label = selected ? (node.name.length>30 ? node.name.slice(0,27)+'…' : node.name) : node.id;
+      const fullName=nodeLabel(node);
+      const label = selected ? (fullName.length>30 ? fullName.slice(0,27)+'…' : fullName) : node.id;
       if (labels || selected) group.append(svgElement('text',{x:selected?0:10,y:selected?-22:-13,'text-anchor':selected?'middle':'start',fill:color,'font-size':selected?11:9,'font-weight':600,stroke:'none'},label));
-      group.append(svgElement('circle',{r:15,fill:'transparent',stroke:'none',tabindex:0,role:'button','aria-label':node.name+' ('+node.id+')'}));
+      group.append(svgElement('circle',{r:15,fill:'transparent',stroke:'none',tabindex:0,role:'button','aria-label':nodeLabel(node)+' ('+node.id+')'}));
       group.addEventListener('click',()=>this.handlers.select(node.id));
       group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();this.handlers.select(node.id);}});
       this.markerLayer.append(group);

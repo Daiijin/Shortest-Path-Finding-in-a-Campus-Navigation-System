@@ -147,7 +147,9 @@ Kết quả giữ các field của backend: `algorithm`, `start`, `goal`, `path`
 - Đầu vào sai: HTTP 400, JSON `{ "error": { "code": "invalid_request", "message": "..." } }`.
 - `GET /api/health`: kiểm tra backend đang chạy.
 
-`get_nodes()` phân loại tên `Routing Node NN` thành waypoint vì CSV hiện chưa có cột loại node. Nếu nhóm đổi schema/quy ước tên, cập nhật tại `route_service.py`.
+CSV hiện có các cột `type`, `displayName`, `showOnMap`, `isTurn`, `enabled`,
+`needsReview`, `reviewReason`. Loader giữ metadata và chỉ đưa cạnh đang mở
+vào A*/Dijkstra. Nạp dữ liệu mới bằng `sync_graph_data.py`; xem `GRAPH_DATA.md`.
 
 ## Kiểm thử và đóng gói
 

@@ -1,6 +1,7 @@
 import {requestJSON} from './api.js';
 import {createCampusMap} from './map.js';
 import {getDevicePosition, nearestLocation} from './location.js';
+import {nodeLabel, isSelectableLocation} from './graph.js';
 
 const $ = id => document.getElementById(id);
 const normalize = text => text.toLocaleLowerCase('vi').replaceAll('đ','d').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -31,12 +32,12 @@ class LocationPicker {
   }
   render(query) {
     const terms=normalize(query).trim().split(/\s+/).filter(Boolean);
-    this.filtered=this.nodes.filter(node=>terms.every(term=>normalize(node.name+' '+node.id).includes(term)));
+    this.filtered=this.nodes.filter(node=>terms.every(term=>normalize(node.name+' '+nodeLabel(node)+' '+node.id).includes(term)));
     this.list.replaceChildren();this.highlight=-1;
     for(const node of this.filtered) {
       const option=document.createElement('div');option.className='picker-option';option.id=this.prefix+'-option-'+node.id;
       option.setAttribute('role','option');option.setAttribute('aria-selected',String(node.id===this.id));
-      const name=document.createElement('span');name.textContent=node.name;
+      const name=document.createElement('span');name.textContent=nodeLabel(node);
       const code=document.createElement('span');code.textContent=node.id;
       option.append(name,code);
       option.addEventListener('pointerdown',event=>event.preventDefault());
@@ -64,13 +65,13 @@ class LocationPicker {
   }
   set(id, silent=false) {
     const node=this.nodes.find(node=>node.id===id);
-    this.id=node?.id||null;this.input.value=node?node.name+' · '+node.id:'';
+    this.id=node?.id||null;this.input.value=node?nodeLabel(node)+' · '+node.id:'';
     this.input.removeAttribute('aria-invalid');this.close();if(!silent)this.changed();
   }
   resolve(label) {
     if(this.id)return this.id;
     const typed=this.input.value.trim();
-    const matches=this.nodes.filter(node=>node.id.toUpperCase()===typed.toUpperCase()||node.name===typed);
+    const matches=this.nodes.filter(node=>node.id.toUpperCase()===typed.toUpperCase()||node.name===typed||nodeLabel(node)===typed);
     if(matches.length===1){this.set(matches[0].id,true);return this.id;}
     this.input.setAttribute('aria-invalid','true');
     this.input.focus();
@@ -113,7 +114,7 @@ async function locateDevice() {
     $('useGpsStartButton').hidden=!state.nearest.eligible;
     if(state.nearest.reason==='outside_campus')gpsStatus(accuracy+' Bạn chưa ở gần địa điểm trong campus. Không tự chọn điểm đầu.');
     else if(state.nearest.reason==='low_accuracy')gpsStatus(accuracy+' Vị trí còn quá rộng để gợi ý điểm đầu. Hãy thử lại hoặc chọn thủ công.');
-    else if(state.nearest.eligible)gpsStatus(accuracy+' Gần '+state.nearest.node.name+' (khoảng '+Math.round(state.nearest.distance)+' m).');
+    else if(state.nearest.eligible)gpsStatus(accuracy+' Gần '+nodeLabel(state.nearest.node)+' (khoảng '+Math.round(state.nearest.distance)+' m).');
     else gpsStatus(accuracy+' Chưa có địa điểm phù hợp.');
   } catch(error) {
     if(revision===state.gpsRevision)gpsStatus(error.message,true);
@@ -130,6 +131,7 @@ function clearResult() {
   state.result=null;$('resultEmpty').hidden=false;$('resultContent').hidden=true;$('routeList').replaceChildren();
   for(const id of ['distance','visited','time','pathCount'])$(id).textContent='—';
   state.map?.clearRoute();
+  $('routeReview').hidden=true;$('routeReview').open=false;$('reviewEdges').replaceChildren();
 }
 function inputsChanged() {
   state.revision++;state.controller?.abort();state.controller=null;setBusy(false);clearResult();
@@ -159,7 +161,7 @@ function renderRouteList() {
     const item=document.createElement('li');item.classList.toggle('is-waypoint',node.type==='waypoint');
     const dot=document.createElement('span');dot.className='route-step-dot';dot.textContent=node.type==='waypoint'?'':index===0?'A':index===stops.length-1?'B':String(index+1);
     const copy=document.createElement('div'),name=document.createElement('span'),code=document.createElement('span');
-    name.className='route-stop-name';name.textContent=node.type==='waypoint'?'Điểm trung gian':node.name;
+    name.className='route-stop-name';name.textContent=node.type==='waypoint'?(node.isTurn?'Điểm rẽ':'Điểm trung gian'):nodeLabel(node);
     code.className='route-stop-id';code.textContent=node.id;copy.append(name,code);item.append(dot,copy);list.append(item);
   }
 }
@@ -172,8 +174,15 @@ function displayResult(result) {
   $('visited').textContent=result.visited_nodes;
   $('time').textContent=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:3,maximumFractionDigits:3}).format(result.execution_time*1000)+' ms';
   $('pathCount').textContent=result.path.length+' node';
+  const reviewEdges=result.review_edges||[];
+  $('routeReview').hidden=!reviewEdges.length;$('reviewEdges').replaceChildren();
+  $('reviewSummary').textContent=reviewEdges.length+' đoạn trong lộ trình cần kiểm tra';
+  for(const edge of reviewEdges) {
+    const item=document.createElement('li');item.textContent=edge.id+': '+(edge.reviewReason||'Đoạn đường cần kiểm tra.');$('reviewEdges').append(item);
+  }
   renderRouteList();state.map?.selection(result.start,result.goal,$('showLabels').checked);state.map?.route(result);
   setStatus(result.found?(result.start===result.goal?'Điểm đầu trùng điểm đến. Bạn không cần di chuyển.':'Đã tìm thấy lộ trình bằng '+result.algorithm+'.'):'Không có đường nối hai địa điểm trong dữ liệu hiện tại.',result.found?'success':'error');
+  if(result.found&&reviewEdges.length)setStatus('Đã tìm thấy lộ trình bằng '+result.algorithm+'. Có '+reviewEdges.length+' đoạn được đánh dấu cần kiểm tra trong dữ liệu.','warning');
 }
 async function findRoute(event) {
   event?.preventDefault();if(!state.ready||state.busy)return;
@@ -217,7 +226,7 @@ $('locateButton').addEventListener('click',locateDevice);
 $('useGpsStartButton').addEventListener('click',()=>{
   if(!state.nearest?.eligible)return;
   startPicker.set(state.nearest.node.id);setTarget('goal');
-  gpsStatus('Điểm đầu: '+state.nearest.node.name+'. Lộ trình tính từ node này; chưa gồm đoạn từ GPS đến node.');
+  gpsStatus('Điểm đầu: '+nodeLabel(state.nearest.node)+'. Lộ trình tính từ node này; chưa gồm đoạn từ GPS đến node.');
 });
 $('resetButton').addEventListener('click',reset);
 $('swapButton').addEventListener('click',()=>{
@@ -265,10 +274,11 @@ async function bootstrap() {
     data.buildings=buildings;data.basemap=basemap;
     state.data=data;state.ready=true;
     $('locateButton').disabled=false;
-    const locations=data.nodes.filter(node=>node.type==='location');
+    const locations=data.nodes.filter(isSelectableLocation);
     startPicker.setNodes(locations);goalPicker.setNodes(locations);
     $('locationCount').textContent=data.stats.locations;$('nodeCount').textContent=data.stats.nodes;$('edgeCount').textContent=data.stats.edges;
-    $('aboutData').textContent=data.stats.locations+' địa điểm, '+data.stats.waypoints+' waypoint, '+data.stats.edges+' cạnh; '+buildings.features.length+' đường bao tòa nhà từ OpenStreetMap.';
+    $('edgeCount').title=data.stats.edges+' cạnh đang mở / '+data.stats.edges_total+' cạnh gốc; '+data.stats.disabled_edges+' cạnh bị khóa.';
+    $('aboutData').textContent=data.stats.locations+' địa điểm, '+data.stats.waypoints+' waypoint; '+data.stats.edges+' / '+data.stats.edges_total+' cạnh đang mở, '+data.stats.disabled_edges+' cạnh bị khóa; '+data.stats.review_edges+' cạnh mở cần kiểm tra; '+buildings.features.length+' đường bao tòa nhà từ OpenStreetMap.';
     $('connectionText').textContent='Backend Python · đã kết nối';
     setBusy(false);setStatus('Chọn địa điểm trong danh sách hoặc click marker.');
     state.map=await createCampusMap($('map'),data,config,{select:selectOnMap,notice,provider:providerChanged});

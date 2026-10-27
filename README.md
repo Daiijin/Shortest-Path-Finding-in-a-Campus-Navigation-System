@@ -25,7 +25,8 @@ Chạy qua server Python để giao diện gọi được API thuật toán.
 
 - Tìm kiếm 44 địa điểm theo tên, từ khóa không dấu hoặc ID; chọn bằng marker.
 - Đảo điểm đầu/điểm đến; chọn A* hoặc Dijkstra; tìm đường và đặt lại.
-- Graph gồm 87 node và 134 cạnh. Đường đi giữ toàn bộ các waypoint trung gian.
+- Graph gồm 87 node và 134 cạnh: 128 cạnh đang mở, 6 cạnh bị khóa. Đường đi giữ toàn bộ các waypoint trung gian.
+- Dữ liệu CSV điều khiển tên hiển thị, marker, điểm rẽ và ghi chú các đoạn cần kiểm tra.
 - Hiển thị khoảng cách, số node đã duyệt, thời gian thuật toán và các điểm đi qua.
 - Bản đồ 2D/3D, phóng to/thu nhỏ, mở rộng, bật/tắt lớp tòa nhà và mạng đường.
 - Tuyến đường xanh có viền trắng và mũi tên chỉ hướng.
@@ -47,6 +48,8 @@ chưa gồm đoạn từ vị trí thiết bị đến node được chọn.
 | `js/main.js`, `js/api.js` | Tương tác, trạng thái và gọi API |
 | `js/open_map.js`, `js/map.js` | MapLibre, bản đồ dự phòng, marker và route |
 | `js/location.js` | Browser Geolocation và gợi ý location |
+| `js/graph.js`, `js/astar.js`, `js/dijkstra.js` | Graph metadata và thuật toán JavaScript dùng JSON đồng bộ |
+| `sync_graph_data.py` | Kiểm tra và đồng bộ CSV sang JSON |
 | `web_server.py` | Phục vụ website và API HTTP/JSON |
 | `haui_astar_project/` | Thuật toán Python, graph loader, CSV và route service |
 | `data/campus3/*.geojson` | Đường bao tòa nhà và nền campus local |
@@ -64,10 +67,10 @@ API dữ liệu: `GET /api/health`, `/api/graph`, `/api/config`, `/api/buildings
 ## Kiểm thử
 
 ```bash
-python -m unittest test_web -v
+python -m unittest test_graph_data test_web -v
 ```
 
-Để kiểm thử logic GPS, dùng Node.js 20+:
+Để kiểm thử graph, A*/Dijkstra JavaScript và logic GPS, dùng Node.js 20+:
 
 ```bash
 npm test
@@ -77,6 +80,7 @@ npm test
 
 - [Hướng dẫn bản đồ miễn phí](FREE_MAP_SETUP.md)
 - [Chi tiết website và API](README_WEBSITE.md)
+- [Dữ liệu graph và cách nhập CSV mới](GRAPH_DATA.md)
 - [Leaflet dự phòng](LEAFLET_SETUP.md)
 - [Google Maps tùy chọn](GOOGLE_MAPS_SETUP.md)
 
