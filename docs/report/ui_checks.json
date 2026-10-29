@@ -1,0 +1,30 @@
+[
+  {
+    "clientWidth": 1425,
+    "distance": "666,10 m",
+    "scrollWidth": 1425,
+    "viewport": [
+      1440,
+      1000
+    ],
+    "visited": "128"
+  },
+  {
+    "clientWidth": 753,
+    "distance": "666,10 m",
+    "scrollWidth": 753,
+    "viewport": [
+      768,
+      1024
+    ]
+  },
+  {
+    "clientWidth": 375,
+    "distance": "666,10 m",
+    "scrollWidth": 375,
+    "viewport": [
+      390,
+      844
+    ]
+  }
+]

@@ -19,8 +19,13 @@ class GraphDatasetTests(unittest.TestCase):
         nodes,edges=load_dataset()
         self.assertEqual(nodes,json.loads((ROOT/'data/campus3/nodes.json').read_text(encoding='utf-8')))
         self.assertEqual(edges,json.loads((ROOT/'data/campus3/edges.json').read_text(encoding='utf-8')))
-        self.assertEqual({e['id'] for e in edges if not e['enabled']},{'E006','E015','E058','E062','E087','E092'})
-        self.assertEqual(sum(n['isTurn'] for n in nodes),6)
+        self.assertEqual(len(nodes),155)
+        self.assertEqual(len(edges),172)
+        self.assertEqual(sum(n['type']=='location' for n in nodes),44)
+        self.assertEqual({e['id'] for e in edges if not e['enabled']},set())
+        self.assertEqual(sum(e['needsReview'] for e in edges),29)
+        self.assertEqual(sum(n['isTurn'] for n in nodes),77)
+        self.assertEqual(next(n for n in nodes if n['id']=='N028')['displayName'],'Hồ Nước')
         self.assertTrue(all(isinstance(n['showOnMap'],bool) for n in nodes))
 
     def test_loader_honors_explicit_type_and_false_strings(self):
@@ -60,7 +65,15 @@ class GraphDatasetTests(unittest.TestCase):
             for goal in locations:
                 a=astar(graph,coordinates,start,goal);d=dijkstra(graph,start,goal)
                 self.assertTrue(math.isclose(a['distance'],d['distance'],abs_tol=1e-7),f'{start}->{goal}: {a["distance"]} != {d["distance"]}')
-                self.assertTrue(all(frozenset((u,v)) not in closed for u,v in zip(a['path'],a['path'][1:])))
+                for result in (a,d):
+                    self.assertEqual((result['path'][0],result['path'][-1]),(start,goal))
+                    cost=0
+                    for u,v in zip(result['path'],result['path'][1:]):
+                        self.assertNotIn(frozenset((u,v)),closed)
+                        weights=[weight for neighbor,weight in graph[u] if neighbor==v]
+                        self.assertEqual(len(weights),1,'Every route segment must be an enabled graph edge')
+                        cost+=weights[0]
+                    self.assertTrue(math.isclose(cost,result['distance'],abs_tol=1e-7))
 
 
 if __name__=='__main__':unittest.main()

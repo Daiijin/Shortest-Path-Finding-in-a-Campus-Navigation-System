@@ -2,8 +2,8 @@
   {
     "id": "N001",
     "name": "Cổng Chính Haui",
-    "lat": 20.54005746249062,
-    "lon": 105.8968930687437,
+    "lat": 20.54004357314997,
+    "lon": 105.89691793262391,
     "type": "location",
     "displayName": "Cổng Chính Haui",
     "showOnMap": true,
@@ -12,8 +12,8 @@
   {
     "id": "N002",
     "name": "Vườn hoa",
-    "lat": 20.54040535164342,
-    "lon": 105.89637448611,
+    "lat": 20.540401310372598,
+    "lon": 105.89637143344073,
     "type": "location",
     "displayName": "Vườn hoa",
     "showOnMap": true,
@@ -22,8 +22,8 @@
   {
     "id": "N003",
     "name": "Đài phun nước trung tâm",
-    "lat": 20.54165721055564,
-    "lon": 105.8942493560029,
+    "lat": 20.54142546139579,
+    "lon": 105.89462127310847,
     "type": "location",
     "displayName": "Đài phun nước trung tâm",
     "showOnMap": true,
@@ -102,8 +102,8 @@
   {
     "id": "N011",
     "name": "Routing Node 01",
-    "lat": 20.54202303068155,
-    "lon": 105.8926008433465,
+    "lat": 20.540613112354755,
+    "lon": 105.89125182785887,
     "type": "waypoint",
     "displayName": "Routing Node 01",
     "showOnMap": false,
@@ -122,8 +122,8 @@
   {
     "id": "N013",
     "name": "Routing Node 02",
-    "lat": 20.54235069630064,
-    "lon": 105.8927330429864,
+    "lat": 20.540935799194532,
+    "lon": 105.8914700577008,
     "type": "waypoint",
     "displayName": "Routing Node 02",
     "showOnMap": false,
@@ -132,32 +132,32 @@
   {
     "id": "N014",
     "name": "Routing Node 03",
-    "lat": 20.5425867259136,
-    "lon": 105.8930008015641,
+    "lat": 20.541198918142417,
+    "lon": 105.89164800238068,
     "type": "waypoint",
     "displayName": "Routing Node 03",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N015",
     "name": "Routing Node 04",
-    "lat": 20.54302948245971,
-    "lon": 105.8933030818231,
+    "lat": 20.541421612102894,
+    "lon": 105.89179860805095,
     "type": "waypoint",
     "displayName": "Routing Node 04",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N016",
     "name": "Routing Node 05",
-    "lat": 20.54370461104501,
-    "lon": 105.8937542361755,
+    "lat": 20.541768323562057,
+    "lon": 105.89203308549968,
     "type": "waypoint",
     "displayName": "Routing Node 05",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N017",
@@ -242,8 +242,8 @@
   {
     "id": "N025",
     "name": "Routing Node 06",
-    "lat": 20.54444828835094,
-    "lon": 105.8958222136313,
+    "lat": 20.542638026025003,
+    "lon": 105.8925978263935,
     "type": "waypoint",
     "displayName": "Routing Node 06",
     "showOnMap": false,
@@ -271,19 +271,19 @@
   },
   {
     "id": "N028",
-    "name": "Hồ tình yêu",
+    "name": "Hồ Nước",
     "lat": 20.53864792676488,
     "lon": 105.8938265665638,
     "type": "location",
-    "displayName": "Hồ tình yêu",
+    "displayName": "Hồ Nước",
     "showOnMap": true,
     "isTurn": false
   },
   {
     "id": "N029",
     "name": "Tòa C19",
-    "lat": 20.53999010579368,
-    "lon": 105.8948422081487,
+    "lat": 20.54004188247702,
+    "lon": 105.89475703443055,
     "type": "location",
     "displayName": "Tòa C19",
     "showOnMap": true,
@@ -312,12 +312,12 @@
   {
     "id": "N032",
     "name": "Routing Node 07",
-    "lat": 20.54013834120704,
-    "lon": 105.8935727534614,
+    "lat": 20.545006681097984,
+    "lon": 105.89421363415669,
     "type": "waypoint",
     "displayName": "Routing Node 07",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N033",
@@ -362,8 +362,8 @@
   {
     "id": "N037",
     "name": "Routing Node 08",
-    "lat": 20.54056747879371,
-    "lon": 105.8951166740675,
+    "lat": 20.54568285480837,
+    "lon": 105.89465336129197,
     "type": "waypoint",
     "displayName": "Routing Node 08",
     "showOnMap": false,
@@ -372,18 +372,18 @@
   {
     "id": "N038",
     "name": "Routing Node 09",
-    "lat": 20.54120110270031,
-    "lon": 105.8958687491974,
+    "lat": 20.54572931823085,
+    "lon": 105.89472844357742,
     "type": "waypoint",
     "displayName": "Routing Node 09",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N039",
     "name": "Routing Node 10",
-    "lat": 20.54224172828171,
-    "lon": 105.896569970307,
+    "lat": 20.545689149448535,
+    "lon": 105.8948430892858,
     "type": "waypoint",
     "displayName": "Routing Node 10",
     "showOnMap": false,
@@ -392,18 +392,18 @@
   {
     "id": "N040",
     "name": "Routing Node 11",
-    "lat": 20.54252885865255,
-    "lon": 105.896418364525,
+    "lat": 20.539909831483023,
+    "lon": 105.89166316332592,
     "type": "waypoint",
     "displayName": "Routing Node 11",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N041",
     "name": "Routing Node 12",
-    "lat": 20.54199738139715,
-    "lon": 105.8972480116692,
+    "lat": 20.54002866501868,
+    "lon": 105.89158877213012,
     "type": "waypoint",
     "displayName": "Routing Node 12",
     "showOnMap": false,
@@ -412,18 +412,18 @@
   {
     "id": "N042",
     "name": "Routing Node 13",
-    "lat": 20.54159021847267,
-    "lon": 105.8978943092677,
+    "lat": 20.541433786249485,
+    "lon": 105.89263088077108,
     "type": "waypoint",
     "displayName": "Routing Node 13",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N043",
     "name": "Routing Node 14",
-    "lat": 20.54298723851869,
-    "lon": 105.8979166157517,
+    "lat": 20.541458869348165,
+    "lon": 105.89258587715376,
     "type": "waypoint",
     "displayName": "Routing Node 14",
     "showOnMap": false,
@@ -432,18 +432,18 @@
   {
     "id": "N044",
     "name": "Routing Node 15",
-    "lat": 20.54391822868604,
-    "lon": 105.897337623302,
+    "lat": 20.545517652202275,
+    "lon": 105.8951167621051,
     "type": "waypoint",
     "displayName": "Routing Node 15",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N045",
     "name": "cổng phụ 2",
-    "lat": 20.54476643373227,
-    "lon": 105.8963727617538,
+    "lat": 20.544768308489232,
+    "lon": 105.89636670924008,
     "type": "location",
     "displayName": "cổng phụ 2",
     "showOnMap": true,
@@ -452,8 +452,8 @@
   {
     "id": "N046",
     "name": "Ngã Tư",
-    "lat": 20.54318714485835,
-    "lon": 105.8952934351126,
+    "lat": 20.543207515759917,
+    "lon": 105.89528916701792,
     "type": "location",
     "displayName": "Ngã Tư",
     "showOnMap": true,
@@ -462,18 +462,18 @@
   {
     "id": "N047",
     "name": "Routing Node 16",
-    "lat": 20.54203430846426,
-    "lon": 105.8945273781024,
+    "lat": 20.54132064827279,
+    "lon": 105.89283387077124,
     "type": "waypoint",
     "displayName": "Routing Node 16",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N048",
     "name": "Routing Node 17",
-    "lat": 20.54263442662791,
-    "lon": 105.8947609617021,
+    "lat": 20.5419137548522,
+    "lon": 105.89313322876794,
     "type": "waypoint",
     "displayName": "Routing Node 17",
     "showOnMap": false,
@@ -482,8 +482,8 @@
   {
     "id": "N049",
     "name": "Routing Node 18",
-    "lat": 20.54121933042452,
-    "lon": 105.893961230085,
+    "lat": 20.542259056629202,
+    "lon": 105.89329945807803,
     "type": "waypoint",
     "displayName": "Routing Node 18",
     "showOnMap": false,
@@ -492,18 +492,18 @@
   {
     "id": "N050",
     "name": "Routing Node 19",
-    "lat": 20.5407208373944,
-    "lon": 105.8936056040474,
+    "lat": 20.543810475227342,
+    "lon": 105.89427120158462,
     "type": "waypoint",
     "displayName": "Routing Node 19",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N051",
     "name": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
-    "lat": 20.54112388399394,
-    "lon": 105.892940099581,
+    "lat": 20.541226652660885,
+    "lon": 105.89300251590558,
     "type": "location",
     "displayName": "Lối Vào/ Lối Ra Sân Đá Bóng Haui",
     "showOnMap": true,
@@ -512,8 +512,8 @@
   {
     "id": "N052",
     "name": "Routing Node 20",
-    "lat": 20.54007556043274,
-    "lon": 105.8933064731726,
+    "lat": 20.54149783765983,
+    "lon": 105.89309773828104,
     "type": "waypoint",
     "displayName": "Routing Node 20",
     "showOnMap": false,
@@ -522,8 +522,8 @@
   {
     "id": "N053",
     "name": "Routing Node 21",
-    "lat": 20.53892357470498,
-    "lon": 105.8923821062996,
+    "lat": 20.542605945352015,
+    "lon": 105.8936641313035,
     "type": "waypoint",
     "displayName": "Routing Node 21",
     "showOnMap": false,
@@ -532,28 +532,28 @@
   {
     "id": "N054",
     "name": "Routing Node 22",
-    "lat": 20.5379120671934,
-    "lon": 105.8929379715521,
+    "lat": 20.543708960347317,
+    "lon": 105.89445254207354,
     "type": "waypoint",
     "displayName": "Routing Node 22",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N055",
     "name": "Routing Node 23",
-    "lat": 20.53902984515359,
-    "lon": 105.8949803672764,
+    "lat": 20.54455159511955,
+    "lon": 105.89495549862828,
     "type": "waypoint",
     "displayName": "Routing Node 23",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N056",
     "name": "Routing Node 24",
-    "lat": 20.53983748973593,
-    "lon": 105.8964141167801,
+    "lat": 20.545295263496755,
+    "lon": 105.89547164677728,
     "type": "waypoint",
     "displayName": "Routing Node 24",
     "showOnMap": false,
@@ -562,18 +562,18 @@
   {
     "id": "N057",
     "name": "Routing Node 25",
-    "lat": 20.54041782814266,
-    "lon": 105.8971239570946,
+    "lat": 20.53938004872182,
+    "lon": 105.89199481358688,
     "type": "waypoint",
     "displayName": "Routing Node 25",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N058",
     "name": "Routing Node 26",
-    "lat": 20.54153014916999,
-    "lon": 105.8945181844048,
+    "lat": 20.54273310624275,
+    "lon": 105.89403284908938,
     "type": "waypoint",
     "displayName": "Routing Node 26",
     "showOnMap": false,
@@ -582,28 +582,28 @@
   {
     "id": "N059",
     "name": "Routing Node 27",
-    "lat": 20.54006629027464,
-    "lon": 105.8962581718651,
+    "lat": 20.543602762489193,
+    "lon": 105.89464224797192,
     "type": "waypoint",
     "displayName": "Routing Node 27",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N060",
     "name": "Routing Node 28",
-    "lat": 20.54161667485256,
-    "lon": 105.8948906006565,
+    "lat": 20.54362731035825,
+    "lon": 105.89459839703522,
     "type": "waypoint",
     "displayName": "Routing Node 28",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N061",
     "name": "Routing Node 29",
-    "lat": 20.54172117789943,
-    "lon": 105.8921027225611,
+    "lat": 20.54110704588506,
+    "lon": 105.8932171121018,
     "type": "waypoint",
     "displayName": "Routing Node 29",
     "showOnMap": false,
@@ -612,18 +612,18 @@
   {
     "id": "N062",
     "name": "Routing Node 30",
-    "lat": 20.54058222117441,
-    "lon": 105.8912741285264,
+    "lat": 20.542749456364266,
+    "lon": 105.89434492757302,
     "type": "waypoint",
     "displayName": "Routing Node 30",
     "showOnMap": false,
-    "isTurn": true
+    "isTurn": false
   },
   {
     "id": "N063",
     "name": "Ngã 3",
-    "lat": 20.54414287207872,
-    "lon": 105.8936620920049,
+    "lat": 20.544155656032192,
+    "lon": 105.8936545899519,
     "type": "location",
     "displayName": "Ngã 3",
     "showOnMap": true,
@@ -632,28 +632,28 @@
   {
     "id": "N064",
     "name": "Routing Node 31",
-    "lat": 20.54498376940929,
-    "lon": 105.8942213649182,
+    "lat": 20.54351386247997,
+    "lon": 105.89479694396798,
     "type": "waypoint",
     "displayName": "Routing Node 31",
-    "showOnMap": false,
-    "isTurn": false
-  },
-  {
-    "id": "N065",
-    "name": "Routing Node 32",
-    "lat": 20.5423420375575,
-    "lon": 105.8983795123135,
-    "type": "waypoint",
-    "displayName": "Routing Node 32",
     "showOnMap": false,
     "isTurn": true
   },
   {
+    "id": "N065",
+    "name": "Routing Node 32",
+    "lat": 20.543536747604417,
+    "lon": 105.8947601732601,
+    "type": "waypoint",
+    "displayName": "Routing Node 32",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
     "id": "N066",
     "name": "Routing Node 33",
-    "lat": 20.54569561157667,
-    "lon": 105.8947097198241,
+    "lat": 20.540800072327087,
+    "lon": 105.89342296158605,
     "type": "waypoint",
     "displayName": "Routing Node 33",
     "showOnMap": false,
@@ -662,18 +662,18 @@
   {
     "id": "N067",
     "name": "Routing Node 34",
-    "lat": 20.54174842659524,
-    "lon": 105.8920407875214,
+    "lat": 20.54162302056614,
+    "lon": 105.8938326057824,
     "type": "waypoint",
     "displayName": "Routing Node 34",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N068",
     "name": "Lối Vào/ Lối Ra KTX",
-    "lat": 20.54409985669867,
-    "lon": 105.8956980784008,
+    "lat": 20.54409525552739,
+    "lon": 105.89571982226788,
     "type": "location",
     "displayName": "Lối Vào/ Lối Ra KTX",
     "showOnMap": true,
@@ -702,8 +702,8 @@
   {
     "id": "N071",
     "name": "Routing Node 35",
-    "lat": 20.54057610742105,
-    "lon": 105.8966220986728,
+    "lat": 20.541820907721842,
+    "lon": 105.89388913569853,
     "type": "waypoint",
     "displayName": "Routing Node 35",
     "showOnMap": false,
@@ -712,8 +712,8 @@
   {
     "id": "N072",
     "name": "Routing Node 36",
-    "lat": 20.54150483151576,
-    "lon": 105.8961565957172,
+    "lat": 20.541965815115688,
+    "lon": 105.8940437534285,
     "type": "waypoint",
     "displayName": "Routing Node 36",
     "showOnMap": false,
@@ -722,68 +722,68 @@
   {
     "id": "N073",
     "name": "Routing Node 37",
-    "lat": 20.54190184071252,
-    "lon": 105.896419496985,
+    "lat": 20.538878294363425,
+    "lon": 105.8923089177369,
     "type": "waypoint",
     "displayName": "Routing Node 37",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N074",
     "name": "Routing Node 38",
-    "lat": 20.54137339985234,
-    "lon": 105.8946990942274,
+    "lat": 20.539782812977343,
+    "lon": 105.89297725829337,
     "type": "waypoint",
     "displayName": "Routing Node 38",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N075",
     "name": "Routing Node 39",
-    "lat": 20.54080328566662,
-    "lon": 105.8952201141479,
+    "lat": 20.54010665478508,
+    "lon": 105.89321654205233,
     "type": "waypoint",
     "displayName": "Routing Node 39",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N076",
     "name": "Routing Node 40",
-    "lat": 20.54115973346449,
-    "lon": 105.8954505128987,
+    "lat": 20.54014340911572,
+    "lon": 105.89324218344515,
     "type": "waypoint",
     "displayName": "Routing Node 40",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N077",
     "name": "Routing Node 41",
-    "lat": 20.54051155978674,
-    "lon": 105.8957159692394,
+    "lat": 20.54067547180688,
+    "lon": 105.89361337313183,
     "type": "waypoint",
     "displayName": "Routing Node 41",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N078",
     "name": "Routing Node 42",
-    "lat": 20.54087148180559,
-    "lon": 105.8959382232972,
+    "lat": 20.541425177352142,
+    "lon": 105.89388931082554,
     "type": "waypoint",
     "displayName": "Routing Node 42",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N079",
     "name": "Lối vào/Lối Ra trung tâm Quốc Phòng Haui",
-    "lat": 20.54151232390761,
-    "lon": 105.8923047397721,
+    "lat": 20.541593542734393,
+    "lon": 105.89234530416884,
     "type": "location",
     "displayName": "Lối vào/Lối Ra trung tâm Quốc Phòng Haui",
     "showOnMap": true,
@@ -792,12 +792,12 @@
   {
     "id": "N080",
     "name": "Routing Node 43",
-    "lat": 20.5395877309948,
-    "lon": 105.8944656431287,
+    "lat": 20.54201891492852,
+    "lon": 105.89425502927648,
     "type": "waypoint",
     "displayName": "Routing Node 43",
     "showOnMap": false,
-    "isTurn": false
+    "isTurn": true
   },
   {
     "id": "N081",
@@ -822,8 +822,8 @@
   {
     "id": "N083",
     "name": "Căng tin",
-    "lat": 20.53924685987838,
-    "lon": 105.8944838405459,
+    "lat": 20.539338509610985,
+    "lon": 105.8945469901871,
     "type": "location",
     "displayName": "Căng tin",
     "showOnMap": true,
@@ -832,8 +832,8 @@
   {
     "id": "N084",
     "name": "Lối Vào/ Lối ra KTX Giáo Viên",
-    "lat": 20.54344770496405,
-    "lon": 105.8947899170669,
+    "lat": 20.543493125417744,
+    "lon": 105.89483026327368,
     "type": "location",
     "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
     "showOnMap": true,
@@ -842,8 +842,8 @@
   {
     "id": "N085",
     "name": "Lối Vào/ Lối ra KTX Giáo Viên",
-    "lat": 20.54355441017966,
-    "lon": 105.8946310408964,
+    "lat": 20.543594378447764,
+    "lon": 105.89465722475336,
     "type": "location",
     "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
     "showOnMap": true,
@@ -852,8 +852,8 @@
   {
     "id": "N086",
     "name": "Lối Vào/ Lối ra KTX Giáo Viên",
-    "lat": 20.54367506761663,
-    "lon": 105.8944316799183,
+    "lat": 20.543710470985413,
+    "lon": 105.89444984355436,
     "type": "location",
     "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
     "showOnMap": true,
@@ -862,11 +862,691 @@
   {
     "id": "N087",
     "name": "Lối Vào/ Lối ra KTX Giáo Viên",
-    "lat": 20.54379655490946,
-    "lon": 105.8942336362629,
+    "lat": 20.543821729481156,
+    "lon": 105.89425109761672,
     "type": "location",
     "displayName": "Lối Vào/ Lối ra KTX Giáo Viên",
     "showOnMap": true,
     "isTurn": false
+  },
+  {
+    "id": "N088",
+    "name": "Routing Node 44",
+    "lat": 20.54269580459151,
+    "lon": 105.89462550337895,
+    "type": "waypoint",
+    "displayName": "Routing Node 44",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N089",
+    "name": "Routing Node 45",
+    "lat": 20.540987582777273,
+    "lon": 105.89383558678614,
+    "type": "waypoint",
+    "displayName": "Routing Node 45",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N090",
+    "name": "Routing Node 46",
+    "lat": 20.541280390009266,
+    "lon": 105.89404405675741,
+    "type": "waypoint",
+    "displayName": "Routing Node 46",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N091",
+    "name": "Routing Node 47",
+    "lat": 20.541965979108365,
+    "lon": 105.89446635204959,
+    "type": "waypoint",
+    "displayName": "Routing Node 47",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N092",
+    "name": "Routing Node 48",
+    "lat": 20.542567443230123,
+    "lon": 105.89488329242872,
+    "type": "waypoint",
+    "displayName": "Routing Node 48",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N093",
+    "name": "Routing Node 49",
+    "lat": 20.543540894920753,
+    "lon": 105.89551774650711,
+    "type": "waypoint",
+    "displayName": "Routing Node 49",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N094",
+    "name": "Routing Node 50",
+    "lat": 20.543723267958516,
+    "lon": 105.89550230856861,
+    "type": "waypoint",
+    "displayName": "Routing Node 50",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N095",
+    "name": "Routing Node 51",
+    "lat": 20.543972540511334,
+    "lon": 105.89581284335314,
+    "type": "waypoint",
+    "displayName": "Routing Node 51",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N096",
+    "name": "Routing Node 52",
+    "lat": 20.54402567967263,
+    "lon": 105.89584917222858,
+    "type": "waypoint",
+    "displayName": "Routing Node 52",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N097",
+    "name": "Routing Node 53",
+    "lat": 20.54431782391901,
+    "lon": 105.89589176245482,
+    "type": "waypoint",
+    "displayName": "Routing Node 53",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N098",
+    "name": "Routing Node 54",
+    "lat": 20.54439882814781,
+    "lon": 105.89610427720481,
+    "type": "waypoint",
+    "displayName": "Routing Node 54",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N099",
+    "name": "Routing Node 55",
+    "lat": 20.53846711143695,
+    "lon": 105.89256673516229,
+    "type": "waypoint",
+    "displayName": "Routing Node 55",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N100",
+    "name": "Routing Node 56",
+    "lat": 20.541227454189112,
+    "lon": 105.89425537953052,
+    "type": "waypoint",
+    "displayName": "Routing Node 56",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N101",
+    "name": "Routing Node 57",
+    "lat": 20.541821191765493,
+    "lon": 105.89462109798146,
+    "type": "waypoint",
+    "displayName": "Routing Node 57",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N102",
+    "name": "Routing Node 58",
+    "lat": 20.543058123154196,
+    "lon": 105.89554561733942,
+    "type": "waypoint",
+    "displayName": "Routing Node 58",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N103",
+    "name": "Routing Node 59",
+    "lat": 20.538547502144652,
+    "lon": 105.89294149141318,
+    "type": "waypoint",
+    "displayName": "Routing Node 59",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N104",
+    "name": "Routing Node 60",
+    "lat": 20.538652965126882,
+    "lon": 105.89286706430407,
+    "type": "waypoint",
+    "displayName": "Routing Node 60",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N105",
+    "name": "Routing Node 61",
+    "lat": 20.539813850319838,
+    "lon": 105.89370587167777,
+    "type": "waypoint",
+    "displayName": "Routing Node 61",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N106",
+    "name": "Routing Node 62",
+    "lat": 20.541280554001943,
+    "lon": 105.89446665537848,
+    "type": "waypoint",
+    "displayName": "Routing Node 62",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N107",
+    "name": "Routing Node 63",
+    "lat": 20.541623348551493,
+    "lon": 105.89467780302458,
+    "type": "waypoint",
+    "displayName": "Routing Node 63",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N108",
+    "name": "Routing Node 64",
+    "lat": 20.538474686262383,
+    "lon": 105.89303602782194,
+    "type": "waypoint",
+    "displayName": "Routing Node 64",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N109",
+    "name": "Routing Node 65",
+    "lat": 20.538498864826803,
+    "lon": 105.89313223054711,
+    "type": "waypoint",
+    "displayName": "Routing Node 65",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N110",
+    "name": "Routing Node 66",
+    "lat": 20.538603714287937,
+    "lon": 105.89322004493891,
+    "type": "waypoint",
+    "displayName": "Routing Node 66",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N111",
+    "name": "Routing Node 67",
+    "lat": 20.538745918543384,
+    "lon": 105.89331925270878,
+    "type": "waypoint",
+    "displayName": "Routing Node 67",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N112",
+    "name": "Routing Node 68",
+    "lat": 20.5397714616325,
+    "lon": 105.8937767108997,
+    "type": "waypoint",
+    "displayName": "Routing Node 68",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N113",
+    "name": "Routing Node 69",
+    "lat": 20.542853491829906,
+    "lon": 105.89588419955149,
+    "type": "waypoint",
+    "displayName": "Routing Node 69",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N114",
+    "name": "Routing Node 70",
+    "lat": 20.537946704687066,
+    "lon": 105.8929663572008,
+    "type": "waypoint",
+    "displayName": "Routing Node 70",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N115",
+    "name": "Routing Node 71",
+    "lat": 20.540765050857363,
+    "lon": 105.89495788979157,
+    "type": "waypoint",
+    "displayName": "Routing Node 71",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N116",
+    "name": "Routing Node 72",
+    "lat": 20.540897199631466,
+    "lon": 105.89493474707162,
+    "type": "waypoint",
+    "displayName": "Routing Node 72",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N117",
+    "name": "Routing Node 73",
+    "lat": 20.541142052881142,
+    "lon": 105.89508556681884,
+    "type": "waypoint",
+    "displayName": "Routing Node 73",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N118",
+    "name": "Routing Node 74",
+    "lat": 20.541382198436466,
+    "lon": 105.89524510248759,
+    "type": "waypoint",
+    "displayName": "Routing Node 74",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N119",
+    "name": "Routing Node 75",
+    "lat": 20.54145534765082,
+    "lon": 105.89537146916221,
+    "type": "waypoint",
+    "displayName": "Routing Node 75",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N120",
+    "name": "Routing Node 76",
+    "lat": 20.5414409178072,
+    "lon": 105.89547873767731,
+    "type": "waypoint",
+    "displayName": "Routing Node 76",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N121",
+    "name": "Routing Node 77",
+    "lat": 20.54267710667176,
+    "lon": 105.89617048623427,
+    "type": "waypoint",
+    "displayName": "Routing Node 77",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N122",
+    "name": "Routing Node 78",
+    "lat": 20.539452592029896,
+    "lon": 105.89434693439689,
+    "type": "waypoint",
+    "displayName": "Routing Node 78",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N123",
+    "name": "Routing Node 79",
+    "lat": 20.54061471139846,
+    "lon": 105.89515567853061,
+    "type": "waypoint",
+    "displayName": "Routing Node 79",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N124",
+    "name": "Routing Node 80",
+    "lat": 20.54254841197829,
+    "lon": 105.89620737220066,
+    "type": "waypoint",
+    "displayName": "Routing Node 80",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N125",
+    "name": "Routing Node 81",
+    "lat": 20.54425547656478,
+    "lon": 105.89723562393824,
+    "type": "waypoint",
+    "displayName": "Routing Node 81",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N126",
+    "name": "Routing Node 82",
+    "lat": 20.538476197409157,
+    "lon": 105.89394185245035,
+    "type": "waypoint",
+    "displayName": "Routing Node 82",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N127",
+    "name": "Routing Node 83",
+    "lat": 20.542537129454754,
+    "lon": 105.89640950471268,
+    "type": "waypoint",
+    "displayName": "Routing Node 83",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N128",
+    "name": "Routing Node 84",
+    "lat": 20.544023519355985,
+    "lon": 105.89738313942821,
+    "type": "waypoint",
+    "displayName": "Routing Node 84",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N129",
+    "name": "Routing Node 85",
+    "lat": 20.53924670709188,
+    "lon": 105.89470797577697,
+    "type": "waypoint",
+    "displayName": "Routing Node 85",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N130",
+    "name": "Routing Node 86",
+    "lat": 20.540805606114834,
+    "lon": 105.89566819483422,
+    "type": "waypoint",
+    "displayName": "Routing Node 86",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N131",
+    "name": "Routing Node 87",
+    "lat": 20.54121745570548,
+    "lon": 105.89585218357556,
+    "type": "waypoint",
+    "displayName": "Routing Node 87",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N132",
+    "name": "Routing Node 88",
+    "lat": 20.541769156105474,
+    "lon": 105.8962278233287,
+    "type": "waypoint",
+    "displayName": "Routing Node 88",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N133",
+    "name": "Routing Node 89",
+    "lat": 20.542291049162888,
+    "lon": 105.8965831679673,
+    "type": "waypoint",
+    "displayName": "Routing Node 89",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N134",
+    "name": "Routing Node 90",
+    "lat": 20.54029834902331,
+    "lon": 105.8956809836918,
+    "type": "waypoint",
+    "displayName": "Routing Node 90",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N135",
+    "name": "Routing Node 91",
+    "lat": 20.541057394097315,
+    "lon": 105.89614852490816,
+    "type": "waypoint",
+    "displayName": "Routing Node 91",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N136",
+    "name": "Routing Node 92",
+    "lat": 20.53906436062565,
+    "lon": 105.8950254375493,
+    "type": "waypoint",
+    "displayName": "Routing Node 92",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N137",
+    "name": "Routing Node 93",
+    "lat": 20.540262887935352,
+    "lon": 105.89578691347863,
+    "type": "waypoint",
+    "displayName": "Routing Node 93",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N138",
+    "name": "Routing Node 94",
+    "lat": 20.54031971359973,
+    "lon": 105.89590322550343,
+    "type": "waypoint",
+    "displayName": "Routing Node 94",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N139",
+    "name": "Routing Node 95",
+    "lat": 20.540950677501357,
+    "lon": 105.89624541118528,
+    "type": "waypoint",
+    "displayName": "Routing Node 95",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N140",
+    "name": "Routing Node 96",
+    "lat": 20.54211215677729,
+    "lon": 105.89691437298607,
+    "type": "waypoint",
+    "displayName": "Routing Node 96",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N141",
+    "name": "Routing Node 97",
+    "lat": 20.54213098755472,
+    "lon": 105.8968795092999,
+    "type": "waypoint",
+    "displayName": "Routing Node 97",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N142",
+    "name": "Routing Node 98",
+    "lat": 20.542090818772408,
+    "lon": 105.89699415500827,
+    "type": "waypoint",
+    "displayName": "Routing Node 98",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N143",
+    "name": "Routing Node 99",
+    "lat": 20.54056080600823,
+    "lon": 105.89612142275465,
+    "type": "waypoint",
+    "displayName": "Routing Node 99",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N144",
+    "name": "Routing Node 100",
+    "lat": 20.54080911333854,
+    "lon": 105.89628598574832,
+    "type": "waypoint",
+    "displayName": "Routing Node 100",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N145",
+    "name": "Routing Node 101",
+    "lat": 20.54214544396988,
+    "lon": 105.89707426461862,
+    "type": "waypoint",
+    "displayName": "Routing Node 101",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N146",
+    "name": "Routing Node 102",
+    "lat": 20.539498548217434,
+    "lon": 105.89579235351856,
+    "type": "waypoint",
+    "displayName": "Routing Node 102",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N147",
+    "name": "Routing Node 103",
+    "lat": 20.542046582388366,
+    "lon": 105.89725729897111,
+    "type": "waypoint",
+    "displayName": "Routing Node 103",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N148",
+    "name": "Routing Node 104",
+    "lat": 20.54310510590952,
+    "lon": 105.89795576954502,
+    "type": "waypoint",
+    "displayName": "Routing Node 104",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N149",
+    "name": "Routing Node 105",
+    "lat": 20.539936189889843,
+    "lon": 105.89657301273428,
+    "type": "waypoint",
+    "displayName": "Routing Node 105",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N150",
+    "name": "Routing Node 106",
+    "lat": 20.54013521980967,
+    "lon": 105.89678853252896,
+    "type": "waypoint",
+    "displayName": "Routing Node 106",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N151",
+    "name": "Routing Node 107",
+    "lat": 20.540370350910088,
+    "lon": 105.89703790486973,
+    "type": "waypoint",
+    "displayName": "Routing Node 107",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N152",
+    "name": "Routing Node 108",
+    "lat": 20.54072445455471,
+    "lon": 105.89734894383764,
+    "type": "waypoint",
+    "displayName": "Routing Node 108",
+    "showOnMap": false,
+    "isTurn": false
+  },
+  {
+    "id": "N153",
+    "name": "Routing Node 109",
+    "lat": 20.540993633857944,
+    "lon": 105.89753230173007,
+    "type": "waypoint",
+    "displayName": "Routing Node 109",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N154",
+    "name": "Routing Node 110",
+    "lat": 20.541615034881723,
+    "lon": 105.89795558383497,
+    "type": "waypoint",
+    "displayName": "Routing Node 110",
+    "showOnMap": false,
+    "isTurn": true
+  },
+  {
+    "id": "N155",
+    "name": "Routing Node 111",
+    "lat": 20.542382241730717,
+    "lon": 105.89842815237623,
+    "type": "waypoint",
+    "displayName": "Routing Node 111",
+    "showOnMap": false,
+    "isTurn": true
   }
 ]

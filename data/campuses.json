@@ -3,8 +3,8 @@
     "id": "campus3",
     "name": "HaUI Campus 3",
     "center": [
-      20.541803839385032,
-      105.89482682041995
+      20.541838011458957,
+      105.89483999011755
     ],
     "zoom": 18,
     "nodes": "data/campus3/nodes.json",

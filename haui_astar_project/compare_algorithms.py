@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import math
 import statistics
 from pathlib import Path
 
@@ -38,7 +39,8 @@ def main(repeats: int = 500) -> list[dict]:
         d = dijkstra(graph, start, goal)
         a = astar(graph, coordinates, start, goal)
 
-        if d["distance"] != a["distance"] or d["path"] != a["path"]:
+        # Equal-cost shortest routes can have different node sequences.
+        if not math.isclose(d["distance"], a["distance"], abs_tol=1e-7):
             raise AssertionError(
                 f"Result mismatch for {start}->{goal}: Dijkstra={d}, A*={a}"
             )
@@ -61,7 +63,8 @@ def main(repeats: int = 500) -> list[dict]:
                 ),
                 "dijkstra_avg_time_ms": round(d_avg * 1000.0, 6),
                 "astar_avg_time_ms": round(a_avg * 1000.0, 6),
-                "same_shortest_path": True,
+                "same_shortest_distance": True,
+                "same_shortest_path": d["path"] == a["path"],
                 "path": " -> ".join(d["path"]),
             }
         )

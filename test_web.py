@@ -53,23 +53,23 @@ class WebsiteApiTests(unittest.TestCase):
         status, _, content = self.request("GET", "/api/graph")
         graph = json.loads(content)
         self.assertEqual(status, 200)
-        self.assertEqual(graph["stats"], {"locations": 44, "nodes": 87, "waypoints": 43, "edges": 128, "edges_total": 134, "disabled_edges": 6, "review_edges": 23})
+        self.assertEqual(graph["stats"], {"locations": 44, "nodes": 155, "waypoints": 111, "edges": 172, "edges_total": 172, "disabled_edges": 0, "review_edges": 29})
         self.assertEqual(graph["nodes"], web_server.get_nodes())
         self.assertEqual(graph["edges"], web_server.get_edges(include_disabled=True))
 
-    def test_disabled_roads_are_not_in_routes_and_review_metadata_is_retained(self):
+    def test_routes_use_enabled_edges_and_retain_updated_review_metadata(self):
         for algorithm in ['astar','dijkstra']:
             status,result=self.post_route(start='N001',goal='N017',algorithm=algorithm)
             self.assertEqual(status,200)
-            self.assertAlmostEqual(result['distance'],688.2)
-            self.assertTrue({'E006','E015','E058','E062','E087','E092'}.isdisjoint(edge['id'] for edge in result['path_edges']))
+            self.assertAlmostEqual(result['distance'],666.1)
             self.assertTrue(all(edge['enabled'] for edge in result['path_edges']))
+            self.assertAlmostEqual(sum(edge['distance'] for edge in result['path_edges']),result['distance'])
         status,result=self.post_route(start='N001',goal='N017',algorithm='astar')
-        self.assertAlmostEqual(result['distance'],688.2)
-        self.assertEqual(len(result['path']),16)
+        self.assertAlmostEqual(result['distance'],666.1)
+        self.assertEqual(len(result['path']),25)
         self.assertEqual(result['needsReview'],bool(result['review_edges']))
         self.assertTrue(result['needsReview'])
-        self.assertEqual([edge['id'] for edge in result['review_edges']],['E096'])
+        self.assertEqual([edge['id'] for edge in result['review_edges']],['E024'])
         self.assertTrue(all(edge['needsReview'] and edge['reviewReason'] for edge in result['review_edges']))
 
     def test_static_javascript_dataset_matches_python_api(self):

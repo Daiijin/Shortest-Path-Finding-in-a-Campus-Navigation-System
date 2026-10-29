@@ -4,7 +4,11 @@ Website tìm đường trong khuôn viên HaUI cơ sở 3, kết nối trực ti
 **A\*** và **Dijkstra** viết bằng Python. Giao diện tiếng Việt, bản đồ
 **MapLibre + OpenFreeMap** 
 
-![CampusNav với bản đồ 3D](docs/images/campus-navigation.png)
+![CampusNav với dữ liệu 155 nút và tuyến tìm đường cập nhật](docs/report/images/campusnav_desktop.jpg)
+
+Báo cáo Chương 3 và Chương 4: [bản Word](docs/report/Bao_cao_Chuong_3_va_4_CampusNav.docx),
+[nội dung Markdown](docs/report/Bao_cao_Chuong_3_va_4_CampusNav.md) và
+[số liệu thực nghiệm](docs/report/measurements.csv).
 
 ## Chạy ứng dụng
 
@@ -25,7 +29,7 @@ Chạy qua server Python để giao diện gọi được API thuật toán.
 
 - Tìm kiếm 44 địa điểm theo tên, từ khóa không dấu hoặc ID; chọn bằng marker.
 - Đảo điểm đầu/điểm đến; chọn A* hoặc Dijkstra; tìm đường và đặt lại.
-- Graph gồm 87 node và 134 cạnh: 128 cạnh đang mở, 6 cạnh bị khóa. Đường đi giữ toàn bộ các waypoint trung gian.
+- Graph gồm 155 node (44 địa điểm, 111 waypoint) và 172 cạnh đang mở; 29 cạnh có ghi chú cần kiểm tra. Đường đi giữ toàn bộ các waypoint trung gian.
 - Dữ liệu CSV điều khiển tên hiển thị, marker, điểm rẽ và ghi chú các đoạn cần kiểm tra.
 - Hiển thị khoảng cách, số node đã duyệt, thời gian thuật toán và các điểm đi qua.
 - Bản đồ 2D/3D, phóng to/thu nhỏ, mở rộng, bật/tắt lớp tòa nhà và mạng đường.
